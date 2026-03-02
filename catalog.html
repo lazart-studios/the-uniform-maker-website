@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalog - The Uniform Maker</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">U</div>
+        <span>The Uniform Maker</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="servicii.html">Servicii</a></li>
+        <li><a href="portofoliu.html">Portofoliu</a></li>
+        <li><a href="catalog.html" class="active">Catalog</a></li>
+        <li><a href="despre.html">Despre Noi</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="cos.html" class="btn btn-secondary"><i class="fas fa-shopping-cart"></i> Coș</a>
+        <a href="contact.html" class="btn btn-primary">Cere Ofertă</a>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Meniu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Small -->
+  <section class="hero-small">
+    <div class="container">
+      <h1>Catalog Uniforme</h1>
+      <p>Descoperă gama noastră completă de uniforme profesionale</p>
+    </div>
+  </section>
+
+  <!-- Shop Section -->
+  <section class="shop-section">
+    <div class="container">
+      <div class="shop-layout">
+        <!-- Sidebar Filters -->
+        <aside class="shop-sidebar">
+          <div class="filter-block">
+            <h3>Categorie</h3>
+            <div class="filter-options">
+              <label class="checkbox-label">
+                <input type="checkbox" checked> Toate
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox"> Uniforme Medicale
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox"> HoReCa
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox"> Corporate
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox"> Industriale
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox"> Școlare
+              </label>
+            </div>
+          </div>
+
+          <div class="filter-block">
+            <h3>Mărime</h3>
+            <div class="size-filter">
+              <button class="size-btn">XS</button>
+              <button class="size-btn active">S</button>
+              <button class="size-btn">M</button>
+              <button class="size-btn">L</button>
+              <button class="size-btn">XL</button>
+              <button class="size-btn">XXL</button>
+            </div>
+          </div>
+
+          <div class="filter-block">
+            <h3>Culoare</h3>
+            <div class="color-filter">
+              <button class="color-btn" style="background: #ffffff; border: 2px solid #ddd;" title="Alb"></button>
+              <button class="color-btn" style="background: #1a1a2e;" title="Negru"></button>
+              <button class="color-btn active" style="background: #1e3a5f;" title="Bleumarin"></button>
+              <button class="color-btn" style="background: #6c757d;" title="Gri"></button>
+              <button class="color-btn" style="background: #0cc0df;" title="Cyan"></button>
+              <button class="color-btn" style="background: #28a745;" title="Verde"></button>
+            </div>
+          </div>
+
+          <div class="filter-block">
+            <h3>Preț</h3>
+            <div class="price-range">
+              <input type="range" min="50" max="500" value="300" class="price-slider">
+              <div class="price-values">
+                <span>50 Lei</span>
+                <span>500 Lei</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" style="width: 100%;">Aplică Filtre</button>
+        </aside>
+
+        <!-- Product Grid -->
+        <div class="shop-content">
+          <div class="shop-header">
+            <p class="results-count">12 produse găsite</p>
+            <div class="sort-dropdown">
+              <select>
+                <option>Sortează după: Popularitate</option>
+                <option>Preț: Crescător</option>
+                <option>Preț: Descrescător</option>
+                <option>Cele mai noi</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+              <div class="product-badge badge-new">Nou</div>
+              <div class="product-image">
+                <img src="https://placehold.co/300x350/0cc0df/ffffff?text=Halat+Medical" alt="Halat Medical Premium">
+              </div>
+              <div class="product-info">
+                <span class="product-category">Medicale</span>
+                <h3>Halat Medical Premium</h3>
+                <div class="product-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <span>(24)</span>
+                </div>
+                <p class="product-price">de la 199 Lei</p>
+                <a href="produs.html" class="btn btn-outline">Vezi Detalii</a>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+              <div class="product-badge badge-popular">Popular</div>
+              <div class="product-image">
+                <img src="https://placehold.co/300x350/1a1a2e/ffffff?text=Costum+Chef" alt="Costum Chef Profesional">
+              </div>
+              <div class="product-info">
+                <span class="product-category">HoReCa</span>
+                <h3>Costum Chef Profesional</h3>
+                <div class="product-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i>
+                  <span>(18)</span>
+                </div>
+                <p class="product-price">de la 349 Lei</p>
+                <a href="produs.html" class="btn btn-outline">Vezi Detalii</a>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://placehold.co/300x350/1e3a5f/ffffff?text=Cămașă+Corporate" alt="Cămașă Corporate">
+              </div>
+              <div class="product-info">
+                <span class="product-category">Corporate</span>
+                <h3>Cămașă Corporate</h3>
+                <div class="product-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <span>(32)</span>
+                </div>
+                <p class="product-price">de la 149 Lei</p>
+                <a href="produs.html" class="btn btn-outline">Vezi Detalii</a>
+              </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+              <div class="product-badge badge-sale">-15%</div>
+              <div class="product-image">
+                <img src="https://placehold.co/300x350/6c757d/ffffff?text=Salopetă+Industrial" alt="Salopetă Industrială">
+              </div>
+              <div class="product-info">
+                <span class="product-category">Industriale</span>
+                <h3>Salopetă Industrială</h3>
+                <div class="product-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                  <span>(12)</span>
+                </div>
+                <p class="product-price"><span class="old-price">229 Lei</span> 195 Lei</p>
+                <a href="produs.html" class="btn btn-outline">Vezi Detalii</a>
+              </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://placehold.co/300x350/28a745/ffffff?text=Scrubs+Medical" alt="Scrubs Medical">
+              </div>
+              <div class="product-info">
+                <span class="product-category">Medicale</span>
+                <h3>Set Scrubs Medical</h3>
+                <div class="product-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <span>(45)</span>
+                </div>
+                <p class="product-price">de la 179 Lei</p>
+                <a href="produs.html" class="btn btn-outline">Vezi Detalii</a>
+              </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+              <div class="product-badge badge-new">Nou</div>
+              <div class="product-image">
+                <img src="https://placehold.co/300x350/0cc0df/ffffff?text=Șorț+Bucătar" alt="Șorț Bucătar">
+              </div>
+              <div class="product-info">
+                <span class="product-category">HoReCa</span>
+                <h3>Șorț Bucătar Premium</h3>
+                <div class="product-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <span>(8)</span>
+                </div>
+                <p class="product-price">de la 89 Lei</p>
+                <a href="produs.html" class="btn btn-outline">Vezi Detalii</a>
+              </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://placehold.co/300x350/1a1a2e/ffffff?text=Uniformă+Școală" alt="Uniformă Școlară">
+              </div>
+              <div class="product-info">
+                <span class="product-category">Școlare</span>
+                <h3>Uniformă Școlară Completă</h3>
+                <div class="product-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i>
+                  <span>(28)</span>
+                </div>
+                <p class="product-price">de la 299 Lei</p>
+                <a href="produs.html" class="btn btn-outline">Vezi Detalii</a>
+              </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card">
+              <div class="product-badge badge-popular">Popular</div>
+              <div class="product-image">
+                <img src="https://placehold.co/300x350/1e3a5f/ffffff?text=Jachetă+Lucru" alt="Jachetă Lucru">
+              </div>
+              <div class="product-info">
+                <span class="product-category">Industriale</span>
+                <h3>Jachetă de Lucru</h3>
+                <div class="product-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                  <span>(15)</span>
+                </div>
+                <p class="product-price">de la 189 Lei</p>
+                <a href="produs.html" class="btn btn-outline">Vezi Detalii</a>
+              </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://placehold.co/300x350/6c757d/ffffff?text=Vestă+Corporate" alt="Vestă Corporate">
+              </div>
+              <div class="product-info">
+                <span class="product-category">Corporate</span>
+                <h3>Vestă Corporate</h3>
+                <div class="product-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <span>(21)</span>
+                </div>
+                <p class="product-price">de la 129 Lei</p>
+                <a href="produs.html" class="btn btn-outline">Vezi Detalii</a>
+              </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="product-card">
+              <div class="product-badge badge-sale">-20%</div>
+              <div class="product-image">
+                <img src="https://placehold.co/300x350/0cc0df/ffffff?text=Bonetă+Medicală" alt="Bonetă Medicală">
+              </div>
+              <div class="product-info">
+                <span class="product-category">Medicale</span>
+                <h3>Bonetă Medicală Set 3</h3>
+                <div class="product-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <span>(56)</span>
+                </div>
+                <p class="product-price"><span class="old-price">75 Lei</span> 60 Lei</p>
+                <a href="produs.html" class="btn btn-outline">Vezi Detalii</a>
+              </div>
+            </div>
+
+            <!-- Product 11 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://placehold.co/300x350/28a745/ffffff?text=Pantalon+Chef" alt="Pantalon Chef">
+              </div>
+              <div class="product-info">
+                <span class="product-category">HoReCa</span>
+                <h3>Pantalon Chef</h3>
+                <div class="product-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i>
+                  <span>(19)</span>
+                </div>
+                <p class="product-price">de la 119 Lei</p>
+                <a href="produs.html" class="btn btn-outline">Vezi Detalii</a>
+              </div>
+            </div>
+
+            <!-- Product 12 -->
+            <div class="product-card">
+              <div class="product-badge badge-new">Nou</div>
+              <div class="product-image">
+                <img src="https://placehold.co/300x350/1a1a2e/ffffff?text=Sacou+Școală" alt="Sacou Școală">
+              </div>
+              <div class="product-info">
+                <span class="product-category">Școlare</span>
+                <h3>Sacou Școlar</h3>
+                <div class="product-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                  <span>(11)</span>
+                </div>
+                <p class="product-price">de la 159 Lei</p>
+                <a href="produs.html" class="btn btn-outline">Vezi Detalii</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="pagination">
+            <a href="#" class="page-btn disabled"><i class="fas fa-chevron-left"></i></a>
+            <a href="#" class="page-btn active">1</a>
+            <a href="#" class="page-btn">2</a>
+            <a href="#" class="page-btn">3</a>
+            <a href="#" class="page-btn"><i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">U</div>
+            <span>The Uniform Maker</span>
+          </a>
+          <p>Croitorie specializată în uniforme premium pentru business-uri din toate industriile.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Linkuri Rapide</h4>
+          <ul>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="servicii.html">Servicii</a></li>
+            <li><a href="portofoliu.html">Portofoliu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Servicii</h4>
+          <ul>
+            <li><a href="servicii.html">Uniforme Medicale</a></li>
+            <li><a href="servicii.html">Uniforme HoReCa</a></li>
+            <li><a href="servicii.html">Uniforme Corporate</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Str. Fabrica de Glucoză, Nr. 5<br>București, Sector 2</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+40 721 234 567</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 The Uniform Maker. Toate drepturile rezervate.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

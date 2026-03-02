@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coș de Cumpărături - The Uniform Maker</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">U</div>
+        <span>The Uniform Maker</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="servicii.html">Servicii</a></li>
+        <li><a href="portofoliu.html">Portofoliu</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="despre.html">Despre Noi</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="cos.html" class="btn btn-secondary active"><i class="fas fa-shopping-cart"></i> Coș (3)</a>
+        <a href="contact.html" class="btn btn-primary">Cere Ofertă</a>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Meniu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Small -->
+  <section class="hero-small">
+    <div class="container">
+      <h1>Coșul Tău</h1>
+      <p>Revizualizează produsele și finalizează comanda</p>
+    </div>
+  </section>
+
+  <!-- Cart Section -->
+  <section class="cart-section">
+    <div class="container">
+      <div class="cart-layout">
+        <!-- Cart Items -->
+        <div class="cart-items">
+          <div class="cart-header">
+            <span>Produs</span>
+            <span>Preț</span>
+            <span>Cantitate</span>
+            <span>Subtotal</span>
+            <span></span>
+          </div>
+
+          <!-- Item 1 -->
+          <div class="cart-item">
+            <div class="cart-product">
+              <img src="https://placehold.co/80x100/0cc0df/ffffff?text=Halat" alt="Halat Medical">
+              <div class="cart-product-info">
+                <h4>Halat Medical Premium</h4>
+                <p class="cart-variant">Culoare: Alb | Mărime: M</p>
+              </div>
+            </div>
+            <div class="cart-price">199 Lei</div>
+            <div class="cart-quantity">
+              <button class="qty-btn" onclick="adjustCartQty(this, -1)">-</button>
+              <input type="number" value="2" min="1">
+              <button class="qty-btn" onclick="adjustCartQty(this, 1)">+</button>
+            </div>
+            <div class="cart-subtotal">398 Lei</div>
+            <button class="cart-remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></button>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="cart-item">
+            <div class="cart-product">
+              <img src="https://placehold.co/80x100/28a745/ffffff?text=Scrubs" alt="Scrubs Medical">
+              <div class="cart-product-info">
+                <h4>Set Scrubs Medical</h4>
+                <p class="cart-variant">Culoare: Turcoaz | Mărime: L</p>
+              </div>
+            </div>
+            <div class="cart-price">179 Lei</div>
+            <div class="cart-quantity">
+              <button class="qty-btn" onclick="adjustCartQty(this, -1)">-</button>
+              <input type="number" value="1" min="1">
+              <button class="qty-btn" onclick="adjustCartQty(this, 1)">+</button>
+            </div>
+            <div class="cart-subtotal">179 Lei</div>
+            <button class="cart-remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></button>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="cart-item">
+            <div class="cart-product">
+              <img src="https://placehold.co/80x100/0cc0df/ffffff?text=Boneta" alt="Bonetă Medicală">
+              <div class="cart-product-info">
+                <h4>Bonetă Medicală Set 3</h4>
+                <p class="cart-variant">Culoare: Mix</p>
+              </div>
+            </div>
+            <div class="cart-price">60 Lei</div>
+            <div class="cart-quantity">
+              <button class="qty-btn" onclick="adjustCartQty(this, -1)">-</button>
+              <input type="number" value="1" min="1">
+              <button class="qty-btn" onclick="adjustCartQty(this, 1)">+</button>
+            </div>
+            <div class="cart-subtotal">60 Lei</div>
+            <button class="cart-remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></button>
+          </div>
+
+          <!-- Cart Actions -->
+          <div class="cart-actions">
+            <a href="catalog.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Continuă Cumpărăturile</a>
+            <button class="btn btn-secondary" onclick="updateCart()"><i class="fas fa-sync"></i> Actualizează Coșul</button>
+          </div>
+
+          <!-- Coupon -->
+          <div class="coupon-section">
+            <input type="text" placeholder="Cod cupon de reducere">
+            <button class="btn btn-primary">Aplică</button>
+          </div>
+        </div>
+
+        <!-- Cart Summary -->
+        <aside class="cart-summary">
+          <h3>Sumar Comandă</h3>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span>637 Lei</span>
+          </div>
+          <div class="summary-row">
+            <span>Livrare</span>
+            <span>25 Lei</span>
+          </div>
+          <div class="summary-row">
+            <span>Reducere</span>
+            <span>-0 Lei</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span>662 Lei</span>
+          </div>
+          <p class="shipping-note"><i class="fas fa-info-circle"></i> Livrare gratuită la comenzi peste 500 Lei</p>
+          
+          <a href="#" class="btn btn-primary btn-large btn-checkout"><i class="fas fa-lock"></i>Finalizează Comanda</a>
+          
+          <!-- Payment Methods -->
+          <div class="payment-methods">
+            <p>Plătește în siguranță cu:</p>
+            <div class="payment-icons">
+              <i class="fab fa-cc-visa"></i>
+              <i class="fab fa-cc-mastercard"></i>
+              <i class="fas fa-university"></i>
+              <i class="fas fa-money-bill-wave"></i>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">U</div>
+            <span>The Uniform Maker</span>
+          </a>
+          <p>Croitorie specializată în uniforme premium.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Linkuri Rapide</h4>
+          <ul>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="servicii.html">Servicii</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <p>+40 721 234 567<br>contact@theuniformmaker.ro</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 The Uniform Maker. Toate drepturile rezervate.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function adjustCartQty(btn, delta) {
+      const input = btn.parentElement.querySelector('input');
+      let val = parseInt(input.value) + delta;
+      if (val < 1) val = 1;
+      input.value = val;
+    }
+    function removeItem(btn) {
+      btn.closest('.cart-item').remove();
+    }
+    function updateCart() {
+      alert('Coșul a fost actualizat!');
+    }
+  </script>
+</body>
+</html>
