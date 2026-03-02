@@ -31,6 +31,38 @@ body {
   padding: 0 20px;
 }
 
+/* ===== MOBILE MENU ===== */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 101;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--dark);
+  transition: all 0.3s;
+  border-radius: 2px;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 /* Navigation */
 .navbar {
   background: #ffffff;
@@ -86,6 +118,77 @@ body {
 
 .cta-button:hover {
   background: var(--primary-dark);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e3f2f5 100%);
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: var(--dark);
+}
+
+.hero-content h1 span {
+  color: var(--primary);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+}
+
+.stat-item h3 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.stat-item p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(12, 192, 223, 0.1);
+  padding: 8px 16px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
 /* Hero Small */
@@ -435,9 +538,31 @@ body {
   opacity: 0.7;
 }
 
-/* Responsive */
+/* ===== RESPONSIVE FIXES ===== */
 @media (max-width: 991px) {
+  /* Hero Tablet */
+  .hero .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-image {
+    order: -1;
+  }
+  
+  .hero-stats {
+    justify-content: center;
+  }
+  
   .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   
@@ -451,12 +576,259 @@ body {
 }
 
 @media (max-width: 767px) {
+  /* Mobile Menu */
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
   .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    padding: 80px 30px 30px;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+    z-index: 100;
+    gap: 0;
+  }
+  
+  .nav-links.active {
+    right: 0;
+  }
+  
+  .nav-links li {
+    border-bottom: 1px solid #eee;
+  }
+  
+  .nav-links a {
+    display: block;
+    padding: 15px 0;
+    font-size: 1.1rem;
+  }
+  
+  .nav-cta {
     display: none;
   }
   
-  .services-grid {
+  /* Hero Mobile */
+  .hero {
+    padding: 40px 0;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+  
+  /* Hero Small */
+  .hero-small {
+    padding: 40px 20px;
+  }
+  
+  .hero-small h1 {
+    font-size: 1.6rem;
+  }
+  
+  .hero-small p {
+    font-size: 1rem;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 50px 0;
+  }
+  
+  .section-header h2 {
+    font-size: 1.6rem;
+  }
+  
+  .section-header p {
+    font-size: 1rem;
+  }
+  
+  /* Grids */
+  .services-grid,
+  .testimonials-grid,
+  .why-us-grid,
+  .portfolio-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .service-card,
+  .testimonial-card {
+    padding: 25px 20px;
+  }
+  
+  /* Product Detail Mobile */
+  .product-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .product-info-detail h1 {
+    font-size: 1.4rem;
+  }
+  
+  .product-price-large {
+    font-size: 1.5rem;
+  }
+  
+  .product-actions {
+    flex-direction: column;
+  }
+  
+  .product-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Shop Mobile */
+  .shop-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .shop-sidebar {
+    order: 1;
+  }
+  
+  .products-grid,
+  .products-grid.small {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Cart Mobile */
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .cart-header {
+    display: none;
+  }
+  
+  .cart-item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .cart-product {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .cart-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .cart-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Configurator Mobile */
+  .configurator-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .config-summary {
+    position: static;
+    order: -1;
+    margin-bottom: 30px;
+  }
+  
+  .uniform-type-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .progress-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .progress-line {
+    display: none;
+  }
+  
+  .progress-step {
+    flex: 0 0 45%;
+  }
+  
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .step-navigation {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .step-navigation .btn {
+    width: 100%;
+  }
+  
+  /* Tabs Mobile */
+  .tab-header {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .tab-btn {
+    white-space: nowrap;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+  
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .footer-social {
+    justify-content: center;
+  }
+  
+  /* Breadcrumb */
+  .breadcrumb {
+    padding: 15px 0;
+    font-size: 0.85rem;
   }
   
   .why-us-grid {
