@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halat Medical Premium - The Uniform Maker</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Abstract Animated Background -->
+  <div class="bg-mesh"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-waves">
+    <div class="wave-layer"></div>
+    <div class="wave-layer"></div>
+    <div class="fade-left"></div>
+    <div class="fade-right"></div>
+  </div>
+  
+  <!-- Floating Orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+  
+  <!-- Particles -->
+  <div class="particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="The Uniform Maker" class="logo-img">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="servicii.html">Servicii</a></li>
+        <li><a href="portofoliu.html">Lucrări</a></li>
+        <li><a href="catalog.html" class="active">Catalog</a></li>
+        <li><a href="despre.html">Despre</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      
+      <div class="nav-cta">
+        <a href="configurator.html" class="btn btn-accent">Configurator</a>
+      </div>
+      
+      <button class="mobile-menu-toggle" aria-label="Meniu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Acasă</a>
+      <span>/</span>
+      <a href="catalog.html">Catalog</a>
+      <span>/</span>
+      <a href="catalog.html">Uniforme Medicale</a>
+      <span>/</span>
+      <span>Halat Medical Premium</span>
+    </div>
+  </div>
+
+  <!-- Product Detail -->
+  <section class="product-detail-section">
+    <div class="container">
+      <div class="product-layout">
+        <!-- Gallery -->
+        <div class="product-gallery">
+          <div class="main-image">
+            <img src="https://placehold.co/500x600/0cc0df/ffffff?text=Halat+Medical+Premium" alt="Halat Medical Premium" id="mainImage">
+          </div>
+          <div class="thumbnail-list">
+            <img src="https://placehold.co/100x120/0cc0df/ffffff?text=Front" class="thumb active" onclick="changeImage(this)">
+            <img src="https://placehold.co/100x120/1a1a2e/ffffff?text=Spate" class="thumb" onclick="changeImage(this)">
+            <img src="https://placehold.co/100x120/1e3a5f/ffffff?text=Detaliu" class="thumb" onclick="changeImage(this)">
+            <img src="https://placehold.co/100x120/6c757d/ffffff?text=Material" class="thumb" onclick="changeImage(this)">
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info-detail">
+          <span class="product-category-tag">Uniforme Medicale</span>
+          <h1>Halat Medical Premium</h1>
+          <div class="product-rating-large">
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <span class="rating-count">24 recenzii</span>
+          </div>
+          <p class="product-price-large">199 Lei</p>
+          <p class="product-description">
+            Halat medical premium confecționat din bumbac 100% de înaltă calitate, 
+            tratament antimicrobian și antistatic. Design ergonomic pentru confort maxim 
+            în timpul turelor lungi. Disponibil în multiple culori și mărimi.
+          </p>
+
+          <!-- Color Selector -->
+          <div class="selector-group">
+            <label>Culoare:</label>
+            <div class="color-options">
+              <button class="color-option active" style="background: #ffffff; border: 2px solid #ddd;" title="Alb"></button>
+              <button class="color-option" style="background: #1a1a2e;" title="Negru"></button>
+              <button class="color-option" style="background: #1e3a5f;" title="Bleumarin"></button>
+              <button class="color-option" style="background: #28a745;" title="Turcoaz"></button>
+            </div>
+          </div>
+
+          <!-- Size Selector -->
+          <div class="selector-group">
+            <label>Mărime: <a href="#" class="size-guide">Ghid mărimi</a></label>
+            <div class="size-options">
+              <button class="size-option">XS</button>
+              <button class="size-option active">S</button>
+              <button class="size-option">M</button>
+              <button class="size-option">L</button>
+              <button class="size-option">XL</button>
+              <button class="size-option">XXL</button>
+            </div>
+          </div>
+
+          <!-- Quantity -->
+          <div class="selector-group">
+            <label>Cantitate:</label>
+            <div class="quantity-selector">
+              <button class="qty-btn" onclick="adjustQty(-1)">-</button>
+              <input type="number" value="1" min="1" id="qtyInput">
+              <button class="qty-btn" onclick="adjustQty(1)">+</button>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="product-actions">
+            <a href="cos.html" class="btn btn-accent btn-large"><i class="fas fa-shopping-cart"></i> Adaugă în Coș</a>
+            <a href="configurator.html" class="btn btn-outline btn-large"><i class="fas fa-pencil-alt"></i> Personalizează</a>
+          </div>
+
+          <!-- Features -->
+          <div class="product-features">
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Livrare gratuită peste 500 Lei</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Returnare în 14 zile</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Garanție 12 luni</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Tabs -->
+      <div class="product-tabs">
+        <div class="tab-header">
+          <button class="tab-btn active" onclick="showTab('descriere')">Descriere</button>
+          <button class="tab-btn" onclick="showTab('specificatii')">Specificații</button>
+          <button class="tab-btn" onclick="showTab('livrare')">Livrare & Returnare</button>
+          <button class="tab-btn" onclick="showTab('recenzii')">Recenzii (24)</button>
+        </div>
+        <div class="tab-content">
+          <div id="descriere" class="tab-pane active">
+            <h3>Descriere Produs</h3>
+            <p>Halatul Medical Premium este alegerea ideală pentru profesioniștii din domeniul medical care pun preț pe calitate și confort. Confecționat din bumbac 100% de înaltă calitate cu tratament antimicrobian, acest halat oferă protecție și igienă superioară.</p>
+            <h4>Caracteristici principale:</h4>
+            <ul>
+              <li>Material: Bumbac 100%, 180 gsm</li>
+              <li>Tratament antimicrobian și antistatic</li>
+              <li>Design ergonomic cu croială modernă</li>
+              <li>Buzunare laterale funcționale</li>
+              <li>Închidere cu nasturi rezistenți</li>
+              <li>Ușor de întreținut, rezistent la spălări frecvente</li>
+            </ul>
+          </div>
+          <div id="specificatii" class="tab-pane">
+            <table class="specs-table">
+              <tr><td>Material</td><td>Bumbac 100%</td></tr>
+              <tr><td>Greutate material</td><td>180 gsm</td></tr>
+              <tr><td>Tratamente</td><td>Antimicrobian, Antistatic</td></tr>
+              <tr><td>Buzunare</td><td>2 laterale, 1 interior</td></tr>
+              <tr><td>Închidere</td><td>Nasturi plastic rezistenți</td></tr>
+              <tr><td>Țară producătoare</td><td>România</td></tr>
+            </table>
+          </div>
+          <div id="livrare" class="tab-pane">
+            <h3>Livrare</h3>
+            <p>Comenzile sunt procesate în 1-2 zile lucrătoare. Livrarea se face prin curier rapid în toată țara:</p>
+            <ul>
+              <li>București: 1-2 zile (25 Lei, gratuit peste 500 Lei)</li>
+              <li>Restul țării: 2-3 zile (25 Lei, gratuit peste 500 Lei)</li>
+            </ul>
+            <h3>Returnare</h3>
+            <p>Acceptăm returnări în termen de 14 zile de la primire. Produsul trebuie să fie în stare originală, cu etichetele atașate.</p>
+          </div>
+          <div id="recenzii" class="tab-pane">
+            <div class="reviews-summary">
+              <div class="rating-average">
+                <span class="big-rating">4.8</span>
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <span>24 recenzii</span>
+              </div>
+            </div>
+            <div class="review-item">
+              <div class="review-header">
+                <strong>Dr. Maria Ionescu</strong>
+                <span class="review-date">15 Feb 2025</span>
+              </div>
+              <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p>Calitate excelentă! Materialul este foarte confortabil și rezistent. Recomand!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Products -->
+      <div class="related-products">
+        <h2>Produse Similare</h2>
+        <div class="products-grid small">
+          <div class="product-card glass">
+            <div class="product-image">
+              <img src="https://placehold.co/300x350/28a745/ffffff?text=Scrubs+Medical" alt="Scrubs Medical">
+            </div>
+            <div class="product-info">
+              <span class="product-category">Medicale</span>
+              <h3>Set Scrubs Medical</h3>
+              <p class="product-price">179 Lei</p>
+              <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
+            </div>
+          </div>
+          <div class="product-card glass">
+            <div class="product-image">
+              <img src="https://placehold.co/300x350/0cc0df/ffffff?text=Bonetă+Medicală" alt="Bonetă Medicală">
+            </div>
+            <div class="product-info">
+              <span class="product-category">Medicale</span>
+              <h3>Bonetă Medicală Set 3</h3>
+              <p class="product-price">60 Lei</p>
+              <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
+            </div>
+          </div>
+          <div class="product-card glass">
+            <div class="product-image">
+              <img src="https://placehold.co/300x350/1a1a2e/ffffff?text=Pantalon+Medical" alt="Pantalon Medical">
+            </div>
+            <div class="product-info">
+              <span class="product-category">Medicale</span>
+              <h3>Pantalon Medical</h3>
+              <p class="product-price">99 Lei</p>
+              <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
+            </div>
+          </div>
+          <div class="product-card glass">
+            <div class="product-image">
+              <img src="https://placehold.co/300x350/1e3a5f/ffffff?text=Halat+Lung" alt="Halat Lung">
+            </div>
+            <div class="product-info">
+              <span class="product-category">Medicale</span>
+              <h3>Halat Medical Lung</h3>
+              <p class="product-price">249 Lei</p>
+              <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
+            </div>
+            <span>The Uniform Maker</span>
+          </a>
+          <p>Croitorie specializată în uniforme premium pentru business-uri din toate industriile.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Navigare</h4>
+          <ul>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="servicii.html">Servicii</a></li>
+            <li><a href="portofoliu.html">Portofoliu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Servicii</h4>
+          <ul>
+            <li><a href="servicii.html">Medicale</a></li>
+            <li><a href="servicii.html">HoReCa</a></li>
+            <li><a href="servicii.html">Corporate</a></li>
+            <li><a href="servicii.html">Industriale</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+              <span>București, Sector 2</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>+40 721 234 567</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z"/></svg>
+              <span>contact@theuniformmaker.ro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 The Uniform Maker. Toate drepturile rezervate.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M16.5 6c.83 0 1.5.67 1.5 1.5S17.33 9 16.5 9 15 8.33 15 7.5 15.67 6 16.5 6M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2m0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2zM4 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function changeImage(thumb) {
+      document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+      document.getElementById('mainImage').src = thumb.src.replace('100x120', '500x600');
+    }
+    function adjustQty(delta) {
+      const input = document.getElementById('qtyInput');
+      let val = parseInt(input.value) + delta;
+      if (val < 1) val = 1;
+      input.value = val;
+    }
+    function showTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+      event.target.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+</body>
+</html>

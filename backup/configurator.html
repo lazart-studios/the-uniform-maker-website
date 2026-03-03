@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurator Uniforme - The Uniform Maker</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Abstract Animated Background -->
+  <div class="bg-mesh"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-waves">
+    <div class="wave-layer"></div>
+    <div class="wave-layer"></div>
+    <div class="fade-left"></div>
+    <div class="fade-right"></div>
+  </div>
+  
+  <!-- Floating Orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+  
+  <!-- Particles -->
+  <div class="particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="The Uniform Maker" class="logo-img">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="servicii.html">Servicii</a></li>
+        <li><a href="portofoliu.html">Lucrări</a></li>
+        <li><a href="despre.html">Despre</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      
+      <div class="nav-cta">
+        <a href="configurator.html" class="btn btn-accent">Configurator</a>
+      </div>
+      
+      <button class="mobile-menu-toggle" aria-label="Meniu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Small -->
+  <section class="hero-small">
+    <div class="container">
+      <h1>Configurator Comandă Personalizată</h1>
+      <p>Creează uniformele perfecte pentru echipa ta în 4 pași simpli</p>
+    </div>
+  </section>
+
+  <!-- Configurator Section -->
+  <section class="configurator-section">
+    <div class="container">
+      <!-- Progress Bar -->
+      <div class="progress-bar">
+        <div class="progress-step active" data-step="1">
+          <div class="step-number">1</div>
+          <span>Tip Uniformă</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="2">
+          <div class="step-number">2</div>
+          <span>Detalii</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="3">
+          <div class="step-number">3</div>
+          <span>Măsurători</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="4">
+          <div class="step-number">4</div>
+          <span>Contact</span>
+        </div>
+      </div>
+
+      <div class="configurator-layout">
+        <!-- Form Steps -->
+        <div class="configurator-form glass" style="padding: 32px; position: relative;">
+          <!-- Step 1: Tip Uniformă -->
+          <div class="config-step active" id="step1">
+            <h2>Alege tipul de uniformă</h2>
+            <p class="step-desc">Selectează categoria care se potrivește nevoilor tale</p>
+            
+            <div class="uniform-type-grid">
+              <label class="uniform-type-card">
+                <input type="radio" name="uniformType" value="medical">
+                <div class="type-content">
+                  <div class="type-icon">
+                    <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg>
+                  </div>
+                  <h3>Medicală</h3>
+                  <p>Halate, scrubs pentru spitale și clinici</p>
+                </div>
+              </label>
+              
+              <label class="uniform-type-card">
+                <input type="radio" name="uniformType" value="horeca">
+                <div class="type-content">
+                  <div class="type-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3z"/></svg>
+                  </div>
+                  <h3>HoReCa</h3>
+                  <p>Restaurant, hotel, catering</p>
+                </div>
+              </label>
+              
+              <label class="uniform-type-card">
+                <input type="radio" name="uniformType" value="corporate">
+                <div class="type-content">
+                  <div class="type-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2z"/></svg>
+                  </div>
+                  <h3>Corporate</h3>
+                  <p>Birou, recepție, call center</p>
+                </div>
+              </label>
+              
+              <label class="uniform-type-card">
+                <input type="radio" name="uniformType" value="industrial">
+                <div class="type-content">
+                  <div class="type-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12z"/></svg>
+                  </div>
+                  <h3>Industrială</h3>
+                  <p>Fabrici, depozite, construcții</p>
+                </div>
+              </label>
+              
+              <label class="uniform-type-card">
+                <input type="radio" name="uniformType" value="scolara">
+                <div class="type-content">
+                  <div class="type-icon">
+                    <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+                  </div>
+                  <h3>Școlară</h3>
+                  <p>Școli, licee, grădinițe</p>
+                </div>
+              </label>
+              
+              <label class="uniform-type-card">
+                <input type="radio" name="uniformType" value="altele">
+                <div class="type-content">
+                  <div class="type-icon">
+                    <svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+                  </div>
+                  <h3>Altele</h3>
+                  <p>Personalizat la cerere</p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 2: Detalii -->
+          <div class="config-step" id="step2">
+            <h2>Detalii comandă</h2>
+            <p class="step-desc">Specifică cerințele pentru uniformele tale</p>
+            
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Număr bucăți estimate</label>
+                <input type="number" min="1" placeholder="Ex: 50">
+              </div>
+              
+              <div class="form-group">
+                <label>Material preferat</label>
+                <select>
+                  <option value="">Alege materialul</option>
+                  <option value="bumbac">Bumbac 100%</option>
+                  <option value="poliester">Poliester</option>
+                  <option value="mix">Mix Bumbac-Poliester</option>
+                  <option value="organic">Bumbac Organic</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label>Culoare principală</label>
+                <div class="color-picker">
+                  <button type="button" class="color-swatch active" style="background: #ffffff;" title="Alb"></button>
+                  <button type="button" class="color-swatch" style="background: #1a1a2e;" title="Negru"></button>
+                  <button type="button" class="color-swatch" style="background: #1e3a5f;" title="Bleumarin"></button>
+                  <button type="button" class="color-swatch" style="background: #6c757d;" title="Gri"></button>
+                  <button type="button" class="color-swatch" style="background: #0cc0df;" title="Cyan"></button>
+                  <button type="button" class="color-swatch" style="background: #28a745;" title="Verde"></button>
+                  <input type="text" placeholder="Altă culoare..." class="color-input">
+                </div>
+              </div>
+              
+              <div class="form-group full-width">
+                <label>Personalizare logo/broderie?</label>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="logo" value="nu" checked> Nu
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="logo" value="da"> Da, doresc logo brodat
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="logo" value="tipar"> Da, doresc tipar/logo imprimat
+                  </label>
+                </div>
+              </div>
+              
+              <div class="form-group full-width logo-upload" style="display:none;">
+                <label>Upload logo (opțional)</label>
+                <div class="file-upload">
+                  <input type="file" id="logoFile" accept=".jpg,.png,.pdf,.ai">
+                  <label for="logoFile" class="file-label">
+                    <svg viewBox="0 0 24 24" width="24" height="24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+                    <span>Trage fișierul aici sau click pentru upload</span>
+                    <small>Acceptăm: JPG, PNG, PDF, AI (max 10MB)</small>
+                  </label>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label>Termen dorit</label>
+                <input type="date">
+              </div>
+              
+              <div class="form-group">
+                <label>Buget estimativ</label>
+                <select>
+                  <option value="">Selectează buget</option>
+                  <option value="sub1000">Sub 1.000 Lei</option>
+                  <option value="1000-5000">1.000 - 5.000 Lei</option>
+                  <option value="5000-10000">5.000 - 10.000 Lei</option>
+                  <option value="peste10000">Peste 10.000 Lei</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Măsurători -->
+          <div class="config-step" id="step3">
+            <h2>Măsurători și distribuție</h2>
+            <p class="step-desc">Specifică mărimile necesare pentru echipa ta</p>
+            
+            <div class="sizes-table-wrapper">
+              <table class="sizes-table">
+                <thead>
+                  <tr>
+                    <th>Mărime</th>
+                    <th>XS</th>
+                    <th>S</th>
+                    <th>M</th>
+                    <th>L</th>
+                    <th>XL</th>
+                    <th>XXL</th>
+                    <th>XXXL</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Bărbați</strong></td>
+                    <td><input type="number" min="0" placeholder="0"></td>
+                    <td><input type="number" min="0" placeholder="0"></td>
+                    <td><input type="number" min="0" placeholder="0"></td>
+                    <td><input type="number" min="0" placeholder="0"></td>
+                    <td><input type="number" min="0" placeholder="0"></td>
+                    <td><input type="number" min="0" placeholder="0"></td>
+                    <td><input type="number" min="0" placeholder="0"></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Femei</strong></td>
+                    <td><input type="number" min="0" placeholder="0"></td>
+                    <td><input type="number" min="0" placeholder="0"></td>
+                    <td><input type="number" min="0" placeholder="0"></td>
+                    <td><input type="number" min="0" placeholder="0"></td>
+                    <td><input type="number" min="0" placeholder="0"></td>
+                    <td><input type="number" min="0" placeholder="0"></td>
+                    <td><input type="number" min="0" placeholder="0"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div class="total-preview">
+              <span>Total bucăți: <strong id="totalPieces">0</strong></span>
+            </div>
+            
+            <div class="form-group full-width">
+              <label>Sau specifică mărimi personalizate</label>
+              <textarea rows="4" placeholder="Ex: 5 bucăți mărime specială - talie 120cm, 3 bucăți înălțime 2m..."></textarea>
+            </div>
+          </div>
+
+          <!-- Step 4: Contact -->
+          <div class="config-step" id="step4">
+            <h2>Date contact</h2>
+            <p class="step-desc">Completează informațiile pentru a primi oferta</p>
+            
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Nume firmă / Persoană contact *</label>
+                <input type="text" required placeholder="Numele firmei sau nume complet">
+              </div>
+              
+              <div class="form-group">
+                <label>CUI (opțional)</label>
+                <input type="text" placeholder="Cod unic de înregistrare">
+              </div>
+              
+              <div class="form-group">
+                <label>Email *</label>
+                <input type="email" required placeholder="email@exemplu.ro">
+              </div>
+              
+              <div class="form-group">
+                <label>Telefon *</label>
+                <input type="tel" required placeholder="07xx xxx xxx">
+              </div>
+              
+              <div class="form-group full-width">
+                <label>Adresă livrare</label>
+                <input type="text" placeholder="Stradă, număr, oraș, județ">
+              </div>
+              
+              <div class="form-group full-width">
+                <label>Observații suplimentare</label>
+                <textarea rows="4" placeholder="Detalii speciale, cerințe particulare..."></textarea>
+              </div>
+            </div>
+            
+            <div class="form-group full-width checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" required>
+                Sunt de acord cu prelucrarea datelor personale conform GDPR *
+              </label>
+            </div>
+          </div>
+
+          <!-- Step Navigation -->
+          <div class="step-navigation">
+            <button type="button" class="btn btn-secondary" id="prevBtn" onclick="changeStep(-1)" style="visibility: hidden;">
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+              Înapoi
+            </button>
+            <button type="button" class="btn btn-accent" id="nextBtn" onclick="changeStep(1)">
+              Continuă
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Summary Sidebar -->
+        <aside class="config-summary glass" style="padding: 24px; position: relative;">
+          <h3>Rezumat Comandă</h3>
+          <div class="summary-content">
+            <div class="summary-item">
+              <span class="summary-label">Tip uniformă:</span>
+              <span class="summary-value" id="summaryType">-</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Bucăți:</span>
+              <span class="summary-value" id="summaryQty">-</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Material:</span>
+              <span class="summary-value" id="summaryMaterial">-</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Culoare:</span>
+              <span class="summary-value" id="summaryColor">-</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Personalizare:</span>
+              <span class="summary-value" id="summaryLogo">-</span>
+            </div>
+          </div>
+          <div class="summary-note">
+            <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            <p>Vei primi o ofertă personalizată în maximum 24 de ore lucrătoare.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
+            </div>
+            <span>The Uniform Maker</span>
+          </a>
+          <p>Croitorie specializată în uniforme premium pentru business-uri din toate industriile.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Navigare</h4>
+          <ul>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="servicii.html">Servicii</a></li>
+            <li><a href="portofoliu.html">Portofoliu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Servicii</h4>
+          <ul>
+            <li><a href="servicii.html">Medicale</a></li>
+            <li><a href="servicii.html">HoReCa</a></li>
+            <li><a href="servicii.html">Corporate</a></li>
+            <li><a href="servicii.html">Industriale</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+              <span>București, Sector 2</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>+40 721 234 567</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z"/></svg>
+              <span>contact@theuniformmaker.ro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 The Uniform Maker. Toate drepturile rezervate.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M16.5 6c.83 0 1.5.67 1.5 1.5S17.33 9 16.5 9 15 8.33 15 7.5 15.67 6 16.5 6M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2m0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2zM4 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    let currentStep = 1;
+    const totalSteps = 4;
+
+    function changeStep(direction) {
+      const currentStepEl = document.getElementById(`step${currentStep}`);
+      const progressSteps = document.querySelectorAll('.progress-step');
+      
+      if (direction === 1 && currentStep < totalSteps) {
+        currentStepEl.classList.remove('active');
+        currentStep++;
+        document.getElementById(`step${currentStep}`).classList.add('active');
+      } else if (direction === -1 && currentStep > 1) {
+        currentStepEl.classList.remove('active');
+        currentStep--;
+        document.getElementById(`step${currentStep}`).classList.add('active');
+      }
+      
+      // Update progress bar
+      progressSteps.forEach((step, index) => {
+        if (index < currentStep) {
+          step.classList.add('active');
+        } else {
+          step.classList.remove('active');
+        }
+      });
+      
+      // Update buttons
+      document.getElementById('prevBtn').style.visibility = currentStep === 1 ? 'hidden' : 'visible';
+      document.getElementById('nextBtn').innerHTML = currentStep === totalSteps 
+        ? 'Trimite Cererea <svg viewBox="0 0 24 24" width="16" height="16"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>' 
+        : 'Continuă <svg viewBox="0 0 24 24" width="16" height="16"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>';
+      
+      // Update summary
+      updateSummary();
+    }
+
+    function updateSummary() {
+      // Get selected type
+      const typeInputs = document.querySelectorAll('input[name="uniformType"]:checked');
+      if (typeInputs.length > 0) {
+        const typeLabels = {
+          'medical': 'Medicală',
+          'horeca': 'HoReCa',
+          'corporate': 'Corporate',
+          'industrial': 'Industrială',
+          'scolara': 'Școlară',
+          'altele': 'Personalizată'
+        };
+        document.getElementById('summaryType').textContent = typeLabels[typeInputs[0].value] || '-';
+      }
+      
+      // Get total quantity
+      const qtyInputs = document.querySelectorAll('.sizes-table input');
+      let total = 0;
+      qtyInputs.forEach(input => {
+        total += parseInt(input.value) || 0;
+      });
+      document.getElementById('summaryQty').textContent = total > 0 ? total : '-';
+    }
+
+    // Calculate total on input
+    document.querySelectorAll('.sizes-table input').forEach(input => {
+      input.addEventListener('input', () => {
+        let total = 0;
+        document.querySelectorAll('.sizes-table input').forEach(inp => {
+          total += parseInt(inp.value) || 0;
+        });
+        document.getElementById('totalPieces').textContent = total;
+        document.getElementById('summaryQty').textContent = total > 0 ? total : '-';
+      });
+    });
+  </script>
+</body>
+</html>
