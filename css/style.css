@@ -217,9 +217,9 @@ body::before {
 .bg-waves {
   position: fixed;
   bottom: 0;
-  left: -100px;
-  right: -100px;
-  height: 200px;
+  left: -300px;
+  right: -300px;
+  height: 250px;
   z-index: 0;
   pointer-events: none;
   opacity: 0.1;
@@ -231,11 +231,11 @@ body::before {
   content: '';
   position: absolute;
   bottom: 0;
-  left: -100px;
-  right: -100px;
+  left: -200px;
+  right: -200px;
   height: 100%;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%2300f0ff' fill-opacity='1' d='M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,138.7C672,128,768,160,864,181.3C960,203,1056,213,1152,192C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
-  background-size: 1440px 200px;
+  background-size: 1440px 250px;
   background-repeat: repeat-x;
   animation: wave 15s linear infinite;
 }
@@ -243,6 +243,23 @@ body::before {
 .bg-waves::after {
   animation: wave 20s linear infinite reverse;
   opacity: 0.5;
+}
+
+/* Edge fade masks to hide wave boundaries */
+.bg-waves::before,
+.bg-waves::after {
+  mask-image: linear-gradient(to right, 
+    transparent 0%, 
+    black 10%, 
+    black 90%, 
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(to right, 
+    transparent 0%, 
+    black 10%, 
+    black 90%, 
+    transparent 100%
+  );
 }
 
 @keyframes wave {
