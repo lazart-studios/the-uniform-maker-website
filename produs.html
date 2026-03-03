@@ -4,31 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Halat Medical Premium - The Uniform Maker</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <!-- Abstract Animated Background -->
+  <div class="bg-mesh"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-waves"></div>
+  
+  <!-- Floating Orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+  
+  <!-- Particles -->
+  <div class="particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
   <!-- Navigation -->
   <nav class="navbar">
     <div class="container">
       <a href="index.html" class="logo">
-        <div class="logo-icon">U</div>
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
+        </div>
         <span>The Uniform Maker</span>
       </a>
+      
       <ul class="nav-links">
         <li><a href="index.html">Acasă</a></li>
         <li><a href="servicii.html">Servicii</a></li>
-        <li><a href="portofoliu.html">Portofoliu</a></li>
+        <li><a href="portofoliu.html">Lucrări</a></li>
         <li><a href="catalog.html" class="active">Catalog</a></li>
-        <li><a href="despre.html">Despre Noi</a></li>
+        <li><a href="despre.html">Despre</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      
       <div class="nav-cta">
-        <a href="cos.html" class="btn btn-secondary"><i class="fas fa-shopping-cart"></i> Coș</a>
-        <a href="contact.html" class="btn btn-primary">Cere Ofertă</a>
+        <a href="configurator.html" class="btn btn-accent">Configurator</a>
       </div>
+      
       <button class="mobile-menu-toggle" aria-label="Meniu">
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
   </nav>
@@ -116,7 +152,7 @@
 
           <!-- Actions -->
           <div class="product-actions">
-            <a href="cos.html" class="btn btn-primary btn-large"><i class="fas fa-shopping-cart"></i> Adaugă în Coș</a>
+            <a href="cos.html" class="btn btn-accent btn-large"><i class="fas fa-shopping-cart"></i> Adaugă în Coș</a>
             <a href="configurator.html" class="btn btn-outline btn-large"><i class="fas fa-pencil-alt"></i> Personalizează</a>
           </div>
 
@@ -206,7 +242,7 @@
       <div class="related-products">
         <h2>Produse Similare</h2>
         <div class="products-grid small">
-          <div class="product-card">
+          <div class="product-card glass">
             <div class="product-image">
               <img src="https://placehold.co/300x350/28a745/ffffff?text=Scrubs+Medical" alt="Scrubs Medical">
             </div>
@@ -214,10 +250,10 @@
               <span class="product-category">Medicale</span>
               <h3>Set Scrubs Medical</h3>
               <p class="product-price">179 Lei</p>
-              <a href="produs.html" class="btn btn-outline">Vezi Detalii</a>
+              <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
             </div>
           </div>
-          <div class="product-card">
+          <div class="product-card glass">
             <div class="product-image">
               <img src="https://placehold.co/300x350/0cc0df/ffffff?text=Bonetă+Medicală" alt="Bonetă Medicală">
             </div>
@@ -225,10 +261,10 @@
               <span class="product-category">Medicale</span>
               <h3>Bonetă Medicală Set 3</h3>
               <p class="product-price">60 Lei</p>
-              <a href="produs.html" class="btn btn-outline">Vezi Detalii</a>
+              <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
             </div>
           </div>
-          <div class="product-card">
+          <div class="product-card glass">
             <div class="product-image">
               <img src="https://placehold.co/300x350/1a1a2e/ffffff?text=Pantalon+Medical" alt="Pantalon Medical">
             </div>
@@ -236,10 +272,10 @@
               <span class="product-category">Medicale</span>
               <h3>Pantalon Medical</h3>
               <p class="product-price">99 Lei</p>
-              <a href="produs.html" class="btn btn-outline">Vezi Detalii</a>
+              <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
             </div>
           </div>
-          <div class="product-card">
+          <div class="product-card glass">
             <div class="product-image">
               <img src="https://placehold.co/300x350/1e3a5f/ffffff?text=Halat+Lung" alt="Halat Lung">
             </div>
@@ -247,7 +283,7 @@
               <span class="product-category">Medicale</span>
               <h3>Halat Medical Lung</h3>
               <p class="product-price">249 Lei</p>
-              <a href="produs.html" class="btn btn-outline">Vezi Detalii</a>
+              <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
             </div>
           </div>
         </div>
@@ -261,27 +297,66 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="logo">
-            <div class="logo-icon">U</div>
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
+            </div>
             <span>The Uniform Maker</span>
           </a>
-          <p>Croitorie specializată în uniforme premium.</p>
+          <p>Croitorie specializată în uniforme premium pentru business-uri din toate industriile.</p>
         </div>
+        
         <div class="footer-column">
-          <h4>Linkuri Rapide</h4>
+          <h4>Navigare</h4>
           <ul>
             <li><a href="index.html">Acasă</a></li>
             <li><a href="servicii.html">Servicii</a></li>
-            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="portofoliu.html">Portofoliu</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
+        
+        <div class="footer-column">
+          <h4>Servicii</h4>
+          <ul>
+            <li><a href="servicii.html">Medicale</a></li>
+            <li><a href="servicii.html">HoReCa</a></li>
+            <li><a href="servicii.html">Corporate</a></li>
+            <li><a href="servicii.html">Industriale</a></li>
+          </ul>
+        </div>
+        
         <div class="footer-column">
           <h4>Contact</h4>
-          <p>+40 721 234 567<br>contact@theuniformmaker.ro</p>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+              <span>București, Sector 2</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>+40 721 234 567</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z"/></svg>
+              <span>contact@theuniformmaker.ro</span>
+            </div>
+          </div>
         </div>
       </div>
+      
       <div class="footer-bottom">
         <p>&copy; 2025 The Uniform Maker. Toate drepturile rezervate.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M16.5 6c.83 0 1.5.67 1.5 1.5S17.33 9 16.5 9 15 8.33 15 7.5 15.67 6 16.5 6M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2m0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2zM4 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
