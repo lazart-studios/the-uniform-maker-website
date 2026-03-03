@@ -482,6 +482,13 @@ a:not(.btn):hover {
   fill: #000;
 }
 
+.logo-img {
+  height: 40px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+}
+
 .nav-links {
   display: none;
   align-items: center;
