@@ -213,37 +213,37 @@ body::before {
   75% { transform: translate(30px, 40px) scale(1.2); }
 }
 
-/* Wave Animation - Fixed edges */
+/* Wave Animation - Seamless looping */
 .bg-waves {
   position: fixed;
   bottom: 0;
-  left: -50vw;
-  right: -50vw;
-  width: 200vw;
-  height: 250px;
+  left: -20vw;
+  right: -20vw;
+  width: 140vw;
+  height: 200px;
   z-index: 0;
   pointer-events: none;
   opacity: 0.1;
 }
 
-/* Wave layers */
+/* Wave layers - seamless SVG that starts and ends at same height */
 .bg-waves .wave-layer {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 200%;
+  width: 300%;
   height: 100%;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'%3E%3Cpath fill='%2300f0ff' fill-opacity='1' d='M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,138.7C672,128,768,160,864,181.3C960,203,1056,213,1152,192C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
-  background-size: 50% 100%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'%3E%3Cpath fill='%2300f0ff' fill-opacity='1' d='M0,192L60,197.3C120,203,240,213,360,197.3C480,181,600,139,720,138.7C840,139,960,181,1080,197.3C1200,213,1320,203,1380,197.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: calc(100% / 3) 100%;
   background-repeat: repeat-x;
 }
 
 .bg-waves .wave-layer:nth-child(1) {
-  animation: wave 20s linear infinite;
+  animation: wave 18s linear infinite;
 }
 
 .bg-waves .wave-layer:nth-child(2) {
-  animation: wave 25s linear infinite reverse;
+  animation: wave 22s linear infinite reverse;
   opacity: 0.5;
 }
 
@@ -253,7 +253,7 @@ body::before {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 20vw;
+  width: 15vw;
   z-index: 2;
   pointer-events: none;
 }
@@ -270,7 +270,7 @@ body::before {
 
 @keyframes wave {
   0% { background-position-x: 0; }
-  100% { background-position-x: 1440px; }
+  100% { background-position-x: -1440px; }
 }
 
 /* Glassmorphism utility class */
