@@ -4,28 +4,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portofoliu - The Uniform Maker</title>
+  <meta name="description" content="Proiecte finalizate pentru clienți din diverse domenii - The Uniform Maker">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <!-- Abstract Animated Background -->
+  <div class="bg-mesh"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-waves"></div>
+
+  <!-- Floating Orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+
+  <!-- Particles -->
+  <div class="particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
   <!-- Navigation -->
   <nav class="navbar">
     <div class="container">
-      <a href="index.html" class="logo">The <span>Uniform Maker</span></a>
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
+        </div>
+        <span>The Uniform Maker</span>
+      </a>
+
       <ul class="nav-links">
         <li><a href="index.html">Acasă</a></li>
         <li><a href="servicii.html">Servicii</a></li>
-        <li><a href="portofoliu.html" class="active">Portofoliu</a></li>
-        <li><a href="contact.html" class="cta-button">Contact</a></li>
+        <li><a href="portofoliu.html" class="active">Lucrări</a></li>
+        <li><a href="despre.html">Despre</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
+
+      <div class="nav-cta">
+        <a href="configurator.html" class="btn btn-accent">Configurator</a>
+      </div>
+
+      <button class="mobile-menu-toggle" aria-label="Meniu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
 
   <!-- Hero Small -->
   <section class="hero-small">
     <div class="container">
-      <h1>Portofoliu</h1>
-      <p>Proiecte finalizate pentru clienți din diverse domenii</p>
+      <div class="section-header">
+        <div class="section-label">Portofoliu</div>
+        <h1>Proiecte finalizate</h1>
+        <p>Clienți din diverse domenii care ne-au ales</p>
+      </div>
     </div>
   </section>
 
@@ -41,7 +92,7 @@
         <button class="filter-btn" data-filter="industriale">Industriale</button>
         <button class="filter-btn" data-filter="scolare">Școlare</button>
       </div>
-      
+
       <!-- Portfolio Grid -->
       <div class="portfolio-grid">
         <!-- Project 1 -->
@@ -167,7 +218,7 @@
 
       <!-- Load More Button -->
       <div class="load-more">
-        <a href="#" class="btn-primary">Vezi mai multe</a>
+        <a href="#" class="btn btn-accent">Vezi mai multe</a>
       </div>
     </div>
   </section>
@@ -184,10 +235,74 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 The Uniform Maker. Toate drepturile rezervate.</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
+            </div>
+            <span>The Uniform Maker</span>
+          </a>
+          <p>Croitorie specializată în uniforme premium pentru business-uri din toate industriile.</p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Navigare</h4>
+          <ul>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="servicii.html">Servicii</a></li>
+            <li><a href="portofoliu.html">Portofoliu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Servicii</h4>
+          <ul>
+            <li><a href="servicii.html">Medicale</a></li>
+            <li><a href="servicii.html">HoReCa</a></li>
+            <li><a href="servicii.html">Corporate</a></li>
+            <li><a href="servicii.html">Industriale</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+              <span>București, Sector 2</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>+40 721 234 567</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z"/></svg>
+              <span>contact@theuniformmaker.ro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 The Uniform Maker. Toate drepturile rezervate.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M16.5 6c.83 0 1.5.67 1.5 1.5S17.33 9 16.5 9 15 8.33 15 7.5 15.67 6 16.5 6M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2m0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2zM4 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 
+  <script src="js/main.js"></script>
   <script>
     // Filter functionality
     const filterBtns = document.querySelectorAll('.filter-btn');
