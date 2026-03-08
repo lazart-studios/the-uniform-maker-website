@@ -8,7 +8,7 @@
    ========================================= */
 :root {
   /* Primary Colors - Navy & Gold Theme */
-  --color-primary: #1a365d;
+  --color-primary: #0f2744;
   --color-primary-dark: #0f2744;
   --color-primary-light: #2c5282;
   
@@ -33,7 +33,7 @@
   
   /* Semantic Colors */
   --bg-primary: var(--color-white);
-  --bg-secondary: var(--color-cream);
+  --bg-secondary: #0f2744);
   --bg-tertiary: var(--color-gray-50);
   --bg-dark: var(--color-primary);
   
@@ -133,7 +133,7 @@ body {
   font-family: var(--font-sans);
   font-size: var(--text-base);
   line-height: 1.6;
-  color: var(--text-primary);
+  color: #faf9f7;
   background-color: var(--bg-primary);
 }
 
@@ -333,7 +333,7 @@ h4 {
 .nav-links a {
   font-size: var(--text-sm);
   font-weight: 500;
-  color: var(--text-secondary);
+  color: #c9c5bc;
   transition: var(--transition-fast);
   position: relative;
 }
@@ -506,7 +506,7 @@ h4 {
 }
 
 .btn-white:hover {
-  background: var(--color-cream);
+  background: #0f2744;
   transform: translateY(-2px);
 }
 
@@ -580,7 +580,7 @@ h4 {
 
 .hero-subtitle {
   font-size: var(--text-lg);
-  color: var(--text-secondary);
+  color: #c9c5bc;
   line-height: 1.7;
   margin-bottom: var(--space-8);
   max-width: 560px;
@@ -617,7 +617,7 @@ h4 {
 
 .stat-label {
   font-size: var(--text-sm);
-  color: var(--text-secondary);
+  color: #c9c5bc;
 }
 
 /* Hero Image */
@@ -687,7 +687,7 @@ h4 {
 
 .hero-small p {
   font-size: var(--text-lg);
-  color: var(--text-secondary);
+  color: #c9c5bc;
 }
 
 /* =========================================
@@ -734,7 +734,7 @@ h4 {
 
 .section-header p {
   font-size: var(--text-lg);
-  color: var(--text-secondary);
+  color: #c9c5bc;
 }
 
 /* =========================================
@@ -912,7 +912,7 @@ h4 {
 
 .service-card p {
   font-size: var(--text-sm);
-  color: var(--text-secondary);
+  color: #c9c5bc;
   line-height: 1.7;
   margin-bottom: var(--space-6);
 }
@@ -1119,7 +1119,7 @@ h4 {
   border-radius: var(--radius-full);
   font-size: var(--text-sm);
   font-weight: 500;
-  color: var(--text-secondary);
+  color: #c9c5bc;
   cursor: pointer;
   transition: var(--transition-fast);
 }
@@ -1187,7 +1187,7 @@ h4 {
 .testimonial-text {
   font-size: var(--text-base);
   line-height: 1.8;
-  color: var(--text-primary);
+  color: #faf9f7;
   margin-bottom: var(--space-6);
 }
 
@@ -1303,7 +1303,7 @@ h4 {
 
 .about-text p {
   font-size: var(--text-lg);
-  color: var(--text-secondary);
+  color: #c9c5bc;
   line-height: 1.8;
   margin-bottom: var(--space-6);
 }
@@ -1351,7 +1351,7 @@ h4 {
 
 .value-content p {
   font-size: var(--text-sm);
-  color: var(--text-secondary);
+  color: #c9c5bc;
   line-height: 1.6;
 }
 
@@ -1478,7 +1478,7 @@ h4 {
 }
 
 .contact-form > p {
-  color: var(--text-secondary);
+  color: #c9c5bc;
   margin-bottom: var(--space-8);
 }
 
@@ -1515,7 +1515,7 @@ h4 {
   border: 1px solid var(--border-light);
   border-radius: var(--radius);
   font-size: var(--text-base);
-  color: var(--text-primary);
+  color: #faf9f7;
   transition: var(--transition-fast);
 }
 
@@ -1737,4 +1737,61 @@ h4 {
   html {
     scroll-behavior: auto;
   }
+}
+
+/* DARK THEME OVERRIDE */
+.section-cream,
+.section-gray {
+    background-color: #0f2744 !important;
+}
+
+body {
+    background-color: #0a1d33;
+    color: #faf9f7;
+}
+
+.service-card,
+.portfolio-item,
+.testimonial-card,
+.contact-info-item {
+    background-color: #0f2744 !important;
+    border-color: #c9a227 !important;
+}
+
+.service-card h3,
+.portfolio-overlay h4,
+.testimonial-text {
+    color: #faf9f7 !important;
+}
+
+.service-card p,
+.portfolio-overlay p,
+.testimonial-author-info span {
+    color: #c9c5bc !important;
+}
+
+.hero-subtitle {
+    color: #c9c5bc;
+}
+
+.section-header p {
+    color: #c9c5bc;
+}
+
+.about-text p {
+    color: #c9c5bc;
+}
+
+.footer {
+    background: #0a1d33;
+}
+
+.footer-column a,
+.footer-brand p,
+.footer-contact-item {
+    color: #c9c5bc !important;
+}
+
+.footer-column h4 {
+    color: #faf9f7 !important;
 }
