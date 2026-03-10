@@ -51,7 +51,7 @@ def nav(active):
     <nav class="site-nav" id="top">
       <div class="shell nav-inner">
         <a href="index.html" class="brand" aria-label="{company_name}">
-          <img src="images/logo-dark.jpg" alt="{company_name}" class="brand-logo">
+          <img src="images/logo.png" alt="{company_name}" class="brand-logo brand-logo-invert">
         </a>
         <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false">
           <span></span><span></span><span></span>
