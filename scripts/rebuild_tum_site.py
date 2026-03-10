@@ -3,19 +3,23 @@ from textwrap import dedent
 
 root = Path('.')
 
-nav_items = [
-    ('HOME', 'index.html'),
-    ('UNIFORME ȘCOLARE', 'uniforme-scolare.html'),
-    ('CORPORATE', 'corporate.html'),
-    ('MEDICAL', 'medical.html'),
-    ('HOSPITALITY', 'hospitality.html'),
-    ('WORKWEAR', 'workwear.html'),
-    ('DESIGN & PRODUCȚIE', 'servicii.html'),
-    ('COLECȚII UNIFORME', 'catalog.html'),
-    ('MĂSURĂTORI', 'configurator.html'),
-    ('PROIECTE', 'portofoliu.html'),
-    ('DESPRE NOI', 'despre.html'),
-    ('CONTACT', 'contact.html'),
+nav_groups = [
+    ('HOME', 'index.html', []),
+    ('INDUSTRII', 'uniforme-scolare.html', [
+        ('Uniforme școlare', 'uniforme-scolare.html'),
+        ('Corporate', 'corporate.html'),
+        ('Medical', 'medical.html'),
+        ('Hospitality', 'hospitality.html'),
+        ('Workwear', 'workwear.html'),
+    ]),
+    ('SERVICII', 'servicii.html', [
+        ('Design & producție', 'servicii.html'),
+        ('Colecții uniforme', 'catalog.html'),
+        ('Măsurători digitale', 'configurator.html'),
+    ]),
+    ('PROIECTE', 'portofoliu.html', []),
+    ('DESPRE NOI', 'despre.html', []),
+    ('CONTACT', 'contact.html', []),
 ]
 
 company_name = 'The Uniform Maker'
@@ -24,10 +28,25 @@ cta_label = 'Solicită ofertă'
 
 
 def nav(active):
-    links = '\n'.join(
-        f'<li><a href="{href}"{" class=\"active\"" if href == active else ""}>{label}</a></li>'
-        for label, href in nav_items
-    )
+    items = []
+    for label, href, children in nav_groups:
+        if children:
+            child_links = '\n'.join(
+                f'<li><a href="{chref}"{" class=\"active\"" if chref == active else ""}>{clabel}</a></li>'
+                for clabel, chref in children
+            )
+            group_active = active == href or any(chref == active for _, chref in children)
+            items.append(f'''
+            <li class="nav-group{' is-active' if group_active else ''}">
+              <button class="nav-group-toggle" type="button" aria-expanded="{'true' if group_active else 'false'}">{label}</button>
+              <div class="nav-dropdown">
+                <ul>{child_links}</ul>
+              </div>
+            </li>
+            ''')
+        else:
+            items.append(f'<li><a href="{href}"{" class=\"active\"" if href == active else ""}>{label}</a></li>')
+    links = '\n'.join(items)
     return f'''
     <nav class="site-nav" id="top">
       <div class="shell nav-inner">
@@ -121,15 +140,16 @@ def page(title, description, active, body):
 
 index_body = '''
 <header class="hero hero-home">
+  <div class="hero-scrim"></div>
   <div class="shell hero-layout editorial-grid">
-    <div class="hero-copy">
+    <div class="hero-copy hero-copy-enhanced">
       <div class="eyebrow">Design • Prototip • Producție</div>
       <p class="hero-overline">Uniforme pentru instituții și organizații care vor o prezență impecabilă</p>
       <h1>Uniforme școlare & uniforme profesionale într-o direcție premium editorială</h1>
-      <p class="lead">Construim uniforme care exprimă ordine, identitate și rafinament — de la concept și design digital până la prototip și producție controlată.</p>
+      <p class="lead hero-lead">Construim uniforme care exprimă ordine, identitate și rafinament — de la concept și design digital până la prototip și producție controlată.</p>
       <div class="hero-actions">
         <a href="contact.html" class="btn btn-primary">Solicită ofertă</a>
-        <a href="catalog.html" class="btn btn-secondary">Vezi colecțiile</a>
+        <a href="catalog.html" class="btn btn-secondary btn-secondary-light">Vezi colecțiile</a>
       </div>
       <div class="hero-metrics">
         <div><strong>2</strong><span>moduri de colaborare</span></div>
@@ -303,8 +323,8 @@ about_body = '''
 '''
 
 contact_body = '''
-<header class="hero hero-inner"><div class="shell hero-layout service-hero-layout"><div class="hero-copy"><span class="section-kicker">Contact</span><h1>Hai să discutăm proiectul tău</h1><p class="lead">Spune-ne de ce tip de uniformă ai nevoie și revenim cu structură, pași clari și un răspuns mai matur vizual.</p></div><div class="hero-side-card premium-panel"><span class="section-kicker">Response</span><p>Proiectele bune încep cu un brief clar: industrie, volum, termen, personalizare.</p></div></div></header>
-<section class="section"><div class="shell contact-layout"><div class="content-card"><h2>Date de contact</h2><ul class="contact-list"><li><strong>Email</strong><span>contact@theuniformmaker.ro</span></li><li><strong>Telefon</strong><span>+40 721 234 567</span></li><li><strong>Adresă</strong><span>București, România</span></li></ul></div><form class="content-card contact-form"><h2>Solicită ofertă</h2><div class="form-grid"><label><span>Nume</span><input type="text" placeholder="Nume complet"></label><label><span>Email</span><input type="email" placeholder="email@companie.ro"></label><label><span>Telefon</span><input type="tel" placeholder="+40"></label><label><span>Organizație</span><input type="text" placeholder="Companie / instituție"></label><label class="full"><span>Detalii proiect</span><textarea placeholder="Tip uniformă, volum, termen, personalizare"></textarea></label></div><button type="submit" class="btn btn-primary">Trimite solicitarea</button></form></div></section>
+<header class="hero hero-inner"><div class="shell hero-layout service-hero-layout"><div class="hero-copy"><span class="section-kicker">Contact</span><h1>Configurare ofertă & brief proiect</h1><p class="lead">Clientul poate introduce modelul dorit, mărimile, materialele și cerințele speciale, iar pagina calculează instant un total estimativ.</p></div><div class="hero-side-card premium-panel"><span class="section-kicker">Estimator</span><p>Un formular mai util comercial: date de contact + configurator + estimare totală + sumar automat.</p></div></div></header>
+<section class="section"><div class="shell contact-layout quote-layout"><div class="content-card quote-sidebar"><h2>Date de contact</h2><ul class="contact-list"><li><strong>Email</strong><span>contact@theuniformmaker.ro</span></li><li><strong>Telefon</strong><span>+40 721 234 567</span></li><li><strong>Adresă</strong><span>București, România</span></li></ul><div class="quote-summary-card"><span class="section-kicker">Ce include</span><ul class="summary-list"><li>tip uniformă</li><li>mărimi și cantități</li><li>material</li><li>branding</li><li>estimare instant</li></ul></div></div><form class="content-card contact-form quote-form" id="quote-form"><div class="form-header"><h2>Cere ofertă</h2><p>Configurează cererea de ofertă direct din pagină.</p></div><div class="form-grid"><label><span>Nume</span><input type="text" name="name" placeholder="Nume complet"></label><label><span>Email</span><input type="email" name="email" placeholder="email@companie.ro"></label><label><span>Telefon</span><input type="tel" name="phone" placeholder="+40"></label><label><span>Organizație</span><input type="text" name="company" placeholder="Companie / instituție"></label><label><span>Industrie</span><select name="industry"><option value="school">Școală</option><option value="corporate">Corporate</option><option value="medical">Medical</option><option value="hospitality">Hospitality</option><option value="workwear">Workwear</option></select></label><label><span>Model dorit</span><select name="model" id="quote-model"><option value="standard" data-price="45">Model standard</option><option value="premium" data-price="70">Model premium</option><option value="executive" data-price="95">Model executive</option></select></label><label><span>Material</span><select name="material" id="quote-material"><option value="essential" data-price="0">Essential blend</option><option value="premium" data-price="12">Premium cotton blend</option><option value="performance" data-price="18">Performance stretch</option></select></label><label><span>Logo / branding</span><select name="branding" id="quote-branding"><option value="none" data-price="0">Fără branding</option><option value="embroidery" data-price="8">Broderie logo</option><option value="full" data-price="14">Branding complet</option></select></label><label><span>Număr total bucăți</span><input type="number" id="quote-quantity" name="quantity" min="10" value="30"></label><label><span>Deadline</span><select name="deadline" id="quote-deadline"><option value="standard" data-multiplier="1">Standard</option><option value="priority" data-multiplier="1.12">Prioritar</option><option value="rush" data-multiplier="1.2">Rush</option></select></label><label class="full"><span>Mărimi / cantități</span><textarea name="sizes" placeholder="Ex: XS - 4, S - 8, M - 10, L - 6, XL - 2"></textarea></label><label class="full"><span>Detalii proiect</span><textarea name="details" placeholder="Tip uniformă, stil dorit, funcționalități, termen, observații"></textarea></label></div><div class="addons-block"><span class="section-kicker">Opțiuni suplimentare</span><div class="addon-grid"><label class="addon-option"><input type="checkbox" value="6" data-label="Etichetare personalizată"><span>Etichetare personalizată <strong>+€6 / buc</strong></span></label><label class="addon-option"><input type="checkbox" value="9" data-label="Ambalare individuală"><span>Ambalare individuală <strong>+€9 / buc</strong></span></label><label class="addon-option"><input type="checkbox" value="11" data-label="Consultanță sizing"><span>Consultanță sizing <strong>+€11 / buc</strong></span></label><label class="addon-option"><input type="checkbox" value="7" data-label="Mostră suplimentară"><span>Mostră suplimentară <strong>+€7 / buc</strong></span></label></div></div><div class="quote-estimate premium-panel"><div><span class="section-kicker">Estimare instant</span><h3>Total estimativ</h3></div><div class="estimate-values"><strong id="estimate-total">€1,350</strong><span id="estimate-breakdown">30 buc · model standard · essential blend</span></div></div><div class="quote-summary premium-panel"><span class="section-kicker">Rezumat cerere</span><p id="quote-summary-text">Model standard, 30 bucăți, material essential blend, fără branding suplimentar.</p></div><button type="submit" class="btn btn-primary">Trimite solicitarea</button></form></div></section>
 '''
 
 product_body = '''
