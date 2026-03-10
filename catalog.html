@@ -1,514 +1,95 @@
 <!DOCTYPE html>
-<html lang="ro">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catalog - The Uniform Maker</title>
-  <meta name="description" content="Catalog complet de uniforme profesionale - Medicale, HoReCa, Corporate, Industriale, Școlare.">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <!-- Abstract Animated Background -->
-  <div class="bg-mesh"></div>
-  <div class="bg-grid"></div>
-  <div class="bg-waves">
-    <div class="wave-layer"></div>
-    <div class="wave-layer"></div>
-    <div class="fade-left"></div>
-    <div class="fade-right"></div>
-  </div>
-  
-  <!-- Floating Orbs -->
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <div class="orb orb-3"></div>
-  <div class="orb orb-4"></div>
-  
-  <!-- Particles -->
-  <div class="particles">
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-  </div>
+    <html lang="ro">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Colecții uniforme | The Uniform Maker</title>
+      <meta name="description" content="Colecții uniforme disponibile pentru comandă și personalizare.">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="The Uniform Maker" class="logo-img">
-      </a>
-      
-      <ul class="nav-links">
-        <li><a href="index.html">Acasă</a></li>
-        <li><a href="servicii.html">Servicii</a></li>
-        <li><a href="portofoliu.html">Lucrări</a></li>
-        <li><a href="catalog.html" class="active">Catalog</a></li>
-        <li><a href="despre.html">Despre</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      
-      <div class="nav-cta">
-        <a href="configurator.html" class="btn btn-accent">Configurator</a>
-      </div>
-      
-      <button class="mobile-menu-toggle" aria-label="Meniu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+    </head>
+    <body>
 
-  <!-- Hero Small -->
-  <section class="hero-small">
-    <div class="container">
-      <h1>Catalog Uniforme</h1>
-      <p>Descoperă gama noastră completă de uniforme profesionale</p>
-    </div>
-  </section>
-
-  <!-- Shop Section -->
-  <section class="shop-section">
-    <div class="container">
-      <div class="shop-layout">
-        <!-- Sidebar Filters -->
-        <aside class="shop-sidebar">
-          <div class="filter-block glass">
-            <h3>Categorie</h3>
-            <div class="filter-options">
-              <label class="checkbox-label">
-                <input type="checkbox" checked> Toate
-              </label>
-              <label class="checkbox-label">
-                <input type="checkbox"> Uniforme Medicale
-              </label>
-              <label class="checkbox-label">
-                <input type="checkbox"> HoReCa
-              </label>
-              <label class="checkbox-label">
-                <input type="checkbox"> Corporate
-              </label>
-              <label class="checkbox-label">
-                <input type="checkbox"> Industriale
-              </label>
-              <label class="checkbox-label">
-                <input type="checkbox"> Școlare
-              </label>
-            </div>
-          </div>
-
-          <div class="filter-block glass">
-            <h3>Mărime</h3>
-            <div class="size-filter">
-              <button class="size-btn">XS</button>
-              <button class="size-btn active">S</button>
-              <button class="size-btn">M</button>
-              <button class="size-btn">L</button>
-              <button class="size-btn">XL</button>
-              <button class="size-btn">XXL</button>
-            </div>
-          </div>
-
-          <div class="filter-block glass">
-            <h3>Culoare</h3>
-            <div class="color-filter">
-              <button class="color-btn" style="background: #ffffff; border: 2px solid #ddd;" title="Alb"></button>
-              <button class="color-btn" style="background: #1a1a2e;" title="Negru"></button>
-              <button class="color-btn active" style="background: #1e3a5f;" title="Bleumarin"></button>
-              <button class="color-btn" style="background: #6c757d;" title="Gri"></button>
-              <button class="color-btn" style="background: #0cc0df;" title="Cyan"></button>
-              <button class="color-btn" style="background: #28a745;" title="Verde"></button>
-            </div>
-          </div>
-
-          <div class="filter-block glass">
-            <h3>Preț</h3>
-            <div class="price-range">
-              <input type="range" min="50" max="500" value="300" class="price-slider">
-              <div class="price-values">
-                <span>50 Lei</span>
-                <span>500 Lei</span>
-              </div>
-            </div>
-          </div>
-
-          <button class="btn btn-accent" style="width: 100%;">Aplică Filtre</button>
-        </aside>
-
-        <!-- Product Grid -->
-        <div class="shop-content">
-          <div class="shop-header glass">
-            <p class="results-count">12 produse găsite</p>
-            <div class="sort-dropdown">
-              <select>
-                <option>Sortează după: Popularitate</option>
-                <option>Preț: Crescător</option>
-                <option>Preț: Descrescător</option>
-                <option>Cele mai noi</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product-card glass">
-              <div class="product-badge badge-new">Nou</div>
-              <div class="product-image">
-                <img src="https://placehold.co/300x350/0cc0df/ffffff?text=Halat+Medical" alt="Halat Medical Premium">
-              </div>
-              <div class="product-info">
-                <span class="product-category">Medicale</span>
-                <h3>Halat Medical Premium</h3>
-                <div class="product-rating">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <span>(24)</span>
-                </div>
-                <p class="product-price">de la 199 Lei</p>
-                <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
-              </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product-card glass">
-              <div class="product-badge badge-popular">Popular</div>
-              <div class="product-image">
-                <img src="https://placehold.co/300x350/1a1a2e/ffffff?text=Costum+Chef" alt="Costum Chef Profesional">
-              </div>
-              <div class="product-info">
-                <span class="product-category">HoReCa</span>
-                <h3>Costum Chef Profesional</h3>
-                <div class="product-rating">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <span>(18)</span>
-                </div>
-                <p class="product-price">de la 349 Lei</p>
-                <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
-              </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-card glass">
-              <div class="product-image">
-                <img src="https://placehold.co/300x350/1e3a5f/ffffff?text=Cămașă+Corporate" alt="Cămașă Corporate">
-              </div>
-              <div class="product-info">
-                <span class="product-category">Corporate</span>
-                <h3>Cămașă Corporate</h3>
-                <div class="product-rating">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <span>(32)</span>
-                </div>
-                <p class="product-price">de la 149 Lei</p>
-                <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
-              </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card glass">
-              <div class="product-badge badge-sale">-15%</div>
-              <div class="product-image">
-                <img src="https://placehold.co/300x350/6c757d/ffffff?text=Salopetă+Industrial" alt="Salopetă Industrială">
-              </div>
-              <div class="product-info">
-                <span class="product-category">Industriale</span>
-                <h3>Salopetă Industrială</h3>
-                <div class="product-rating">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <span>(12)</span>
-                </div>
-                <p class="product-price"><span class="old-price">229 Lei</span> 195 Lei</p>
-                <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
-              </div>
-            </div>
-
-            <!-- Product 5 -->
-            <div class="product-card glass">
-              <div class="product-image">
-                <img src="https://placehold.co/300x350/28a745/ffffff?text=Scrubs+Medical" alt="Scrubs Medical">
-              </div>
-              <div class="product-info">
-                <span class="product-category">Medicale</span>
-                <h3>Set Scrubs Medical</h3>
-                <div class="product-rating">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <span>(45)</span>
-                </div>
-                <p class="product-price">de la 179 Lei</p>
-                <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
-              </div>
-            </div>
-
-            <!-- Product 6 -->
-            <div class="product-card glass">
-              <div class="product-badge badge-new">Nou</div>
-              <div class="product-image">
-                <img src="https://placehold.co/300x350/0cc0df/ffffff?text=Șorț+Bucătar" alt="Șorț Bucătar">
-              </div>
-              <div class="product-info">
-                <span class="product-category">HoReCa</span>
-                <h3>Șorț Bucătar Premium</h3>
-                <div class="product-rating">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <span>(8)</span>
-                </div>
-                <p class="product-price">de la 89 Lei</p>
-                <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
-              </div>
-            </div>
-
-            <!-- Product 7 -->
-            <div class="product-card glass">
-              <div class="product-image">
-                <img src="https://placehold.co/300x350/1a1a2e/ffffff?text=Uniformă+Școală" alt="Uniformă Școlară">
-              </div>
-              <div class="product-info">
-                <span class="product-category">Școlare</span>
-                <h3>Uniformă Școlară Completă</h3>
-                <div class="product-rating">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <span>(28)</span>
-                </div>
-                <p class="product-price">de la 299 Lei</p>
-                <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
-              </div>
-            </div>
-
-            <!-- Product 8 -->
-            <div class="product-card glass">
-              <div class="product-badge badge-popular">Popular</div>
-              <div class="product-image">
-                <img src="https://placehold.co/300x350/1e3a5f/ffffff?text=Jachetă+Lucru" alt="Jachetă Lucru">
-              </div>
-              <div class="product-info">
-                <span class="product-category">Industriale</span>
-                <h3>Jachetă de Lucru</h3>
-                <div class="product-rating">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <span>(15)</span>
-                </div>
-                <p class="product-price">de la 189 Lei</p>
-                <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
-              </div>
-            </div>
-
-            <!-- Product 9 -->
-            <div class="product-card glass">
-              <div class="product-image">
-                <img src="https://placehold.co/300x350/6c757d/ffffff?text=Vestă+Corporate" alt="Vestă Corporate">
-              </div>
-              <div class="product-info">
-                <span class="product-category">Corporate</span>
-                <h3>Vestă Corporate</h3>
-                <div class="product-rating">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <span>(21)</span>
-                </div>
-                <p class="product-price">de la 129 Lei</p>
-                <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
-              </div>
-            </div>
-
-            <!-- Product 10 -->
-            <div class="product-card glass">
-              <div class="product-badge badge-sale">-20%</div>
-              <div class="product-image">
-                <img src="https://placehold.co/300x350/0cc0df/ffffff?text=Bonetă+Medicală" alt="Bonetă Medicală">
-              </div>
-              <div class="product-info">
-                <span class="product-category">Medicale</span>
-                <h3>Bonetă Medicală Set 3</h3>
-                <div class="product-rating">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <span>(56)</span>
-                </div>
-                <p class="product-price"><span class="old-price">75 Lei</span> 60 Lei</p>
-                <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
-              </div>
-            </div>
-
-            <!-- Product 11 -->
-            <div class="product-card glass">
-              <div class="product-image">
-                <img src="https://placehold.co/300x350/28a745/ffffff?text=Pantalon+Chef" alt="Pantalon Chef">
-              </div>
-              <div class="product-info">
-                <span class="product-category">HoReCa</span>
-                <h3>Pantalon Chef</h3>
-                <div class="product-rating">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <span>(19)</span>
-                </div>
-                <p class="product-price">de la 119 Lei</p>
-                <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
-              </div>
-            </div>
-
-            <!-- Product 12 -->
-            <div class="product-card glass">
-              <div class="product-badge badge-new">Nou</div>
-              <div class="product-image">
-                <img src="https://placehold.co/300x350/1a1a2e/ffffff?text=Sacou+Școală" alt="Sacou Școală">
-              </div>
-              <div class="product-info">
-                <span class="product-category">Școlare</span>
-                <h3>Sacou Școlar</h3>
-                <div class="product-rating">
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                  <span>(11)</span>
-                </div>
-                <p class="product-price">de la 159 Lei</p>
-                <a href="produs.html" class="btn btn-accent">Vezi Detalii</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pagination -->
-          <div class="pagination">
-            <a href="#" class="page-btn disabled">
-              <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
-            </a>
-            <a href="#" class="page-btn active">1</a>
-            <a href="#" class="page-btn">2</a>
-            <a href="#" class="page-btn">3</a>
-            <a href="#" class="page-btn">
-              <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-            </a>
-          </div>
+    <nav class="site-nav" id="top">
+      <div class="shell nav-inner">
+        <a href="index.html" class="brand" aria-label="The Uniform Maker">
+          <img src="images/logo.png" alt="The Uniform Maker" class="brand-logo">
+          <span class="brand-text">The Uniform Maker</span>
+        </a>
+        <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-panel">
+          <ul class="nav-links"><li><a href="index.html">HOME</a></li>
+<li><a href="uniforme-scolare.html">UNIFORME ȘCOLARE</a></li>
+<li><a href="corporate.html">CORPORATE</a></li>
+<li><a href="medical.html">MEDICAL</a></li>
+<li><a href="hospitality.html">HOSPITALITY</a></li>
+<li><a href="workwear.html">WORKWEAR</a></li>
+<li><a href="servicii.html">DESIGN & PRODUCȚIE</a></li>
+<li><a href="catalog.html" class="active">COLECȚII UNIFORME</a></li>
+<li><a href="configurator.html">MĂSURĂTORI</a></li>
+<li><a href="portofoliu.html">PROIECTE</a></li>
+<li><a href="despre.html">DESPRE NOI</a></li>
+<li><a href="contact.html">CONTACT</a></li></ul>
+          <a href="contact.html" class="btn btn-primary nav-button">Solicită ofertă</a>
         </div>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="logo">
-            <div class="logo-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
-            </div>
-            <span>The Uniform Maker</span>
-          </a>
-          <p>Croitorie specializată în uniforme premium pentru business-uri din toate industriile.</p>
+
+<header class="hero hero-inner"><div class="shell"><span class="section-kicker">Colecții</span><h1>Colecții uniforme</h1><p class="lead">Modele dezvoltate de noi. Disponibile pentru comandă și personalizare.</p><a href="contact.html" class="btn btn-primary">Solicită ofertă</a></div></header>
+<section class="section"><div class="shell"><div class="section-heading"><h2>Colecții construite pentru utilizare reală</h2><p>Colecții standard care pot fi adaptate prin culoare, logo și structură de produse.</p></div><div class="content-grid three"><article class="collection-card"><div class="project-image img-school"></div><h3>Școlare</h3><p>Uniforme fete. Uniforme băieți. Tricotaje. Uniforme sport.</p><a href="uniforme-scolare.html" class="text-link">Vezi categoria</a></article><article class="collection-card"><div class="project-image img-corporate"></div><h3>Corporate</h3><p>Ținute pentru recepție, birou, front desk și echipe comerciale.</p><a href="corporate.html" class="text-link">Vezi categoria</a></article><article class="collection-card"><div class="project-image img-medical"></div><h3>Medical</h3><p>Produse pentru clinici, cabinete, spitale și laboratoare.</p><a href="medical.html" class="text-link">Vezi categoria</a></article><article class="collection-card"><div class="project-image img-hospitality"></div><h3>Hospitality</h3><p>Uniforme pentru hoteluri, restaurante și servicii premium.</p><a href="hospitality.html" class="text-link">Vezi categoria</a></article><article class="collection-card"><div class="project-image img-workwear"></div><h3>Workwear</h3><p>Produse rezistente pentru echipe operaționale și producție.</p><a href="workwear.html" class="text-link">Vezi categoria</a></article><article class="collection-card"><div class="project-image img-neutral"></div><h3>Comenzi standard</h3><p>Pentru produsele din colecții, comenzile pot începe de la 10 seturi per produs.</p><a href="contact.html" class="text-link">Solicită ofertă</a></article></div></div></section>
+<section class="section section-tint"><div class="shell two-col"><div><h2>Colecțiile susțin magazinul online fără a coborî brandul</h2><p>Pagina păstrează un discurs premium și pune accentul pe calitate, nu pe volum.</p></div><div class="content-card"><h3>Poți personaliza</h3><ul><li>logo</li><li>culori</li><li>materiale</li><li>etichetare</li><li>structură pe mărimi</li></ul></div></div></section>
+
+
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div>
+          <h3>The Uniform Maker</h3>
+          <p>Uniforme dezvoltate pentru instituții educaționale și organizații.</p>
         </div>
-        
-        <div class="footer-column">
-          <h4>Navigare</h4>
+        <div>
+          <h4>Companie</h4>
           <ul>
-            <li><a href="index.html">Acasă</a></li>
-            <li><a href="servicii.html">Servicii</a></li>
-            <li><a href="portofoliu.html">Portofoliu</a></li>
+            <li><a href="despre.html">Despre noi</a></li>
+            <li><a href="portofoliu.html">Proiecte</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-        
-        <div class="footer-column">
-          <h4>Servicii</h4>
+        <div>
+          <h4>Industrii</h4>
           <ul>
-            <li><a href="servicii.html">Medicale</a></li>
-            <li><a href="servicii.html">HoReCa</a></li>
-            <li><a href="servicii.html">Corporate</a></li>
-            <li><a href="servicii.html">Industriale</a></li>
+            <li><a href="uniforme-scolare.html">Uniforme școlare</a></li>
+            <li><a href="corporate.html">Corporate</a></li>
+            <li><a href="medical.html">Medical</a></li>
+            <li><a href="hospitality.html">Hospitality</a></li>
+            <li><a href="workwear.html">Workwear</a></li>
           </ul>
         </div>
-        
-        <div class="footer-column">
+        <div>
+          <h4>Servicii</h4>
+          <ul>
+            <li><a href="servicii.html">Design & producție</a></li>
+            <li><a href="catalog.html">Colecții uniforme</a></li>
+            <li><a href="configurator.html">Măsurători</a></li>
+          </ul>
+        </div>
+        <div>
           <h4>Contact</h4>
-          <div class="footer-contact">
-            <div class="footer-contact-item">
-              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
-              <span>București, Sector 2</span>
-            </div>
-            <div class="footer-contact-item">
-              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-              <span>+40 721 234 567</span>
-            </div>
-            <div class="footer-contact-item">
-              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z"/></svg>
-              <span>contact@theuniformmaker.ro</span>
-            </div>
-          </div>
+          <ul>
+            <li><a href="mailto:contact@theuniformmaker.ro">contact@theuniformmaker.ro</a></li>
+            <li><a href="tel:+40721234567">+40 721 234 567</a></li>
+            <li>București, România</li>
+            <li><a href="contact.html">GDPR · Termeni</a></li>
+          </ul>
         </div>
       </div>
-      
-      <div class="footer-bottom">
-        <p>&copy; 2025 The Uniform Maker. Toate drepturile rezervate.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Facebook">
-            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </a>
-          <a href="#" aria-label="Instagram">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M16.5 6c.83 0 1.5.67 1.5 1.5S17.33 9 16.5 9 15 8.33 15 7.5 15.67 6 16.5 6M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2m0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9z"/></svg>
-          </a>
-          <a href="#" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2zM4 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="js/main.js"></script>
-</body>
-</html>
+      <script src="js/main.js"></script>
+    </body>
+    </html>

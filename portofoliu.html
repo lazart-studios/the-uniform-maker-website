@@ -1,363 +1,94 @@
 <!DOCTYPE html>
-<html lang="ro">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | The Uniform Maker - Proiecte Finalizate</title>
-  <meta name="description" content="Vezi proiectele noastre finalizate pentru clienți din industrii diverse: medical, HoReCa, corporate, industrial și școlar.">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <div class="logo-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        </div>
-        <span class="logo-text">The Uniform Maker</span>
-      </a>
-      
-      <ul class="nav-links">
-        <li><a href="index.html">Acasă</a></li>
-        <li><a href="servicii.html">Servicii</a></li>
-        <li><a href="portofoliu.html" class="active">Portfolio</a></li>
-        <li><a href="despre.html">Despre</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      
-      <div class="nav-cta">
-        <a href="contact.html" class="btn btn-primary">Cere Ofertă</a>
-      </div>
-      
-      <button class="mobile-menu-toggle" aria-label="Meniu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+    <html lang="ro">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Proiecte | The Uniform Maker</title>
+      <meta name="description" content="Proiecte realizate pentru școli și organizații.">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
 
-  <!-- Hero Section -->
-  <section class="hero-small">
-    <div class="container">
-      <div class="hero-small-content">
-        <div class="hero-badge">
-          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-          Portfolio
-        </div>
-        <h1>Proiecte Finalizate</h1>
-        <p>O selecție din lucrările noastre recente pentru clienți din diverse industrii</p>
-      </div>
-    </div>
-  </section>
+    </head>
+    <body>
 
-  <!-- Portfolio Gallery -->
-  <section class="section">
-    <div class="container">
-      <!-- Filter Buttons -->
-      <div class="filter-buttons">
-        <button class="filter-btn active" data-filter="all">Toate</button>
-        <button class="filter-btn" data-filter="medicale">Medicale</button>
-        <button class="filter-btn" data-filter="horeca">HoReCa</button>
-        <button class="filter-btn" data-filter="corporate">Corporate</button>
-        <button class="filter-btn" data-filter="industriale">Industriale</button>
-        <button class="filter-btn" data-filter="scolare">Școlare</button>
-      </div>
-
-      <!-- Portfolio Grid -->
-      <div class="portfolio-grid">
-        <!-- Medical Projects -->
-        <div class="portfolio-item" data-category="medicale">
-          <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=600&h=450&fit=crop" alt="Uniforme Medicale Spital">
-          <div class="portfolio-overlay">
-            <span class="portfolio-tag">Medical</span>
-            <h4>Spitalul Regina Maria</h4>
-            <p>500+ uniforme complete pentru personal medical</p>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="medicale">
-          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=450&fit=crop" alt="Clinică Medicală">
-          <div class="portfolio-overlay">
-            <span class="portfolio-tag">Medical</span>
-            <h4>Clinica MedLife</h4>
-            <p>Halate și costume pentru 120 de medici</p>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="medicale">
-          <img src="https://images.unsplash.com/photo-1600618528240-fb9fc961b48f?w=600&h=450&fit=crop" alt="Spital Privat">
-          <div class="portfolio-overlay">
-            <span class="portfolio-tag">Medical</span>
-            <h4>Spitalul Floreasca</h4>
-            <p>Echipamente chirurgicale și de îngrijiri</p>
-          </div>
-        </div>
-
-        <!-- HoReCa Projects -->
-        <div class="portfolio-item" data-category="horeca">
-          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=450&fit=crop" alt="Restaurant">
-          <div class="portfolio-overlay">
-            <span class="portfolio-tag">HoReCa</span>
-            <h4>Restaurant La Mama</h4>
-            <p>80 de ținute pentru bucătari și ospătari</p>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="horeca">
-          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=450&fit=crop" alt="Hotel">
-          <div class="portfolio-overlay">
-            <span class="portfolio-tag">Hotel</span>
-            <h4>Hotel Marriott</h4>
-            <p>Uniforme recepție, concierge și cameriste</p>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="horeca">
-          <img src="https://images.unsplash.com/photo-1502550900-1400e8ee3d7e?w=600&h=450&fit=crop" alt="Cafenea">
-          <div class="portfolio-overlay">
-            <span class="portfolio-tag">HoReCa</span>
-            <h4>Coffee Shop Plus</h4>
-            <p>Șorțuri și bonete personalizate</p>
-          </div>
-        </div>
-
-        <!-- Corporate Projects -->
-        <div class="portfolio-item" data-category="corporate">
-          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=450&fit=crop" alt="Office Corporate">
-          <div class="portfolio-overlay">
-            <span class="portfolio-tag">Corporate</span>
-            <h4>Banca Transilvania</h4>
-            <p>Costume și cămăși pentru 200 de angajați</p>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="corporate">
-          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=450&fit=crop" alt="Tech Office">
-          <div class="portfolio-overlay">
-            <span class="portfolio-tag">Corporate</span>
-            <h4>Tech Company SRL</h4>
-            <p>Cămăși polo și jachete cu branding</p>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="corporate">
-          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=450&fit=crop" alt="Business">
-          <div class="portfolio-overlay">
-            <span class="portfolio-tag">Corporate</span>
-            <h4>Deloitte România</h4>
-            <p>Office wear pentru consultanți</p>
-          </div>
-        </div>
-
-        <!-- Industrial Projects -->
-        <div class="portfolio-item" data-category="industriale">
-          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=450&fit=crop" alt="Fabrică">
-          <div class="portfolio-overlay">
-            <span class="portfolio-tag">Industrial</span>
-            <h4>Constructor SA</h4>
-            <p>Combinezoane de protecție și accesorii</p>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="industriale">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&fit=crop" alt="Depozit">
-          <div class="portfolio-overlay">
-            <span class="portfolio-tag">Industrial</span>
-            <h4>Logistic Hub</h4>
-            <p>Salopete și veste pentru angajați</p>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="industriale">
-          <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=450&fit=crop" alt="Santier">
-          <div class="portfolio-overlay">
-            <span class="portfolio-tag">Industrial</span>
-            <h4>BuildCorp</h4>
-            <p>Echipamente de siguranță complete</p>
-          </div>
-        </div>
-
-        <!-- School Projects -->
-        <div class="portfolio-item" data-category="scolare">
-          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=450&fit=crop" alt="Școală">
-          <div class="portfolio-overlay">
-            <span class="portfolio-tag">Școlar</span>
-            <h4>Liceul "Mihai Eminescu"</h4>
-            <p>Uniforme complete pentru 300 de elevi</p>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="scolare">
-          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=450&fit=crop" alt="Cor">
-          <div class="portfolio-overlay">
-            <span class="portfolio-tag">Școlar</span>
-            <h4>Școala Generală Nr. 12</h4>
-            <p>Costume pentru cor și evenimente</p>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-category="scolare">
-          <img src="https://images.unsplash.com/photo-1427504741803-16b9f66ea97c?w=600&h=450&fit=crop" alt="Studenți">
-          <div class="portfolio-overlay">
-            <span class="portfolio-tag">Școlar</span>
-            <h4>Colegiu Tehnic</h4>
-            <p>Halate pentru laboratoare</p>
-          </div>
+    <nav class="site-nav" id="top">
+      <div class="shell nav-inner">
+        <a href="index.html" class="brand" aria-label="The Uniform Maker">
+          <img src="images/logo.png" alt="The Uniform Maker" class="brand-logo">
+          <span class="brand-text">The Uniform Maker</span>
+        </a>
+        <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-panel">
+          <ul class="nav-links"><li><a href="index.html">HOME</a></li>
+<li><a href="uniforme-scolare.html">UNIFORME ȘCOLARE</a></li>
+<li><a href="corporate.html">CORPORATE</a></li>
+<li><a href="medical.html">MEDICAL</a></li>
+<li><a href="hospitality.html">HOSPITALITY</a></li>
+<li><a href="workwear.html">WORKWEAR</a></li>
+<li><a href="servicii.html">DESIGN & PRODUCȚIE</a></li>
+<li><a href="catalog.html">COLECȚII UNIFORME</a></li>
+<li><a href="configurator.html">MĂSURĂTORI</a></li>
+<li><a href="portofoliu.html" class="active">PROIECTE</a></li>
+<li><a href="despre.html">DESPRE NOI</a></li>
+<li><a href="contact.html">CONTACT</a></li></ul>
+          <a href="contact.html" class="btn btn-primary nav-button">Solicită ofertă</a>
         </div>
       </div>
+    </nav>
 
-      <div class="text-center" style="margin-top: var(--space-12);">
-        <p style="color: var(--text-secondary); margin-bottom: var(--space-6);">Acestea sunt doar câteva exemple din portofoliul nostru extins.</p>
-        <a href="contact.html" class="btn btn-primary btn-lg">Discută Proiectul Tău</a>
-      </div>
-    </div>
-  </section>
 
-  <!-- Industries Served Section -->
-  <section class="section section-cream">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Expertiză</span>
-        <h2>Cifrele care contează</h2>
-      </div>
-      
-      <div class="trust-grid" style="background: transparent; color: var(--text-primary);">
-        <div class="trust-item">
-          <div class="trust-value" style="color: var(--color-primary);">6</div>
-          <div class="trust-label" style="color: var(--text-secondary);">Industrii Deservite</div>
-        </div>
-        <div class="trust-item">
-          <div class="trust-value" style="color: var(--color-primary);">500+</div>
-          <div class="trust-label" style="color: var(--text-secondary);">Proiecte Finalizate</div>
-        </div>
-        <div class="trust-item">
-          <div class="trust-value" style="color: var(--color-primary);">50k+</div>
-          <div class="trust-label" style="color: var(--text-secondary);">Uniforme Livrate</div>
-        </div>
-        <div class="trust-item">
-          <div class="trust-value" style="color: var(--color-primary);">15+</div>
-          <div class="trust-label" style="color: var(--text-secondary);">Ani de Experiență</div>
-        </div>
-      </div>
-    </div>
-  </section>
+<header class="hero hero-inner"><div class="shell"><span class="section-kicker">Proiecte</span><h1>Proiecte realizate</h1><p class="lead">Uniforme dezvoltate pentru instituții educaționale și organizații.</p><a href="contact.html" class="btn btn-primary">Solicită ofertă</a></div></header>
+<section class="section"><div class="shell"><div class="project-grid"><article class="project-card"><div class="project-image img-school"></div><div class="project-meta"><span>Școli private</span><h3>Proiecte școlare</h3><p>Structuri clare de produse și mărimi.</p></div></article><article class="project-card"><div class="project-image img-corporate"></div><div class="project-meta"><span>Corporate</span><h3>Uniforme pentru echipe</h3><p>Ținute coerente pentru branduri și recepții.</p></div></article><article class="project-card"><div class="project-image img-medical"></div><div class="project-meta"><span>Medical</span><h3>Produse funcționale</h3><p>Uniforme pentru clinici și cabinete.</p></div></article><article class="project-card"><div class="project-image img-hospitality"></div><div class="project-meta"><span>Hospitality</span><h3>Experiență premium</h3><p>Uniforme pentru hoteluri și restaurante.</p></div></article></div></div></section>
 
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="cta-content">
-      <h2>Vrei să faci parte din portofoliul nostru?</h2>
-      <p>Contactează-ne și hai să discutăm despre proiectul tău. Îți oferim consultație gratuită și deviz personalizat.</p>
-      <div class="cta-buttons">
-        <a href="contact.html" class="btn btn-accent btn-lg">Cere Ofertă</a>
-        <a href="servicii.html" class="btn btn-outline-light btn-lg">Vezi Serviciile</a>
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="logo">
-            <div class="logo-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            </div>
-            <span class="logo-text">The Uniform Maker</span>
-          </a>
-          <p>Croitorie specializată în uniforme premium pentru business-uri din toate industriile.</p>
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div>
+          <h3>The Uniform Maker</h3>
+          <p>Uniforme dezvoltate pentru instituții educaționale și organizații.</p>
         </div>
-        
-        <div class="footer-column">
-          <h4>Navigare</h4>
+        <div>
+          <h4>Companie</h4>
           <ul>
-            <li><a href="index.html">Acasă</a></li>
-            <li><a href="servicii.html">Servicii</a></li>
-            <li><a href="portofoliu.html">Portfolio</a></li>
-            <li><a href="despre.html">Despre</a></li>
+            <li><a href="despre.html">Despre noi</a></li>
+            <li><a href="portofoliu.html">Proiecte</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-        
-        <div class="footer-column">
-          <h4>Servicii</h4>
+        <div>
+          <h4>Industrii</h4>
           <ul>
-            <li><a href="servicii.html">Design Uniforme</a></li>
-            <li><a href="servicii.html">Măsurători</a></li>
-            <li><a href="servicii.html">Producție</a></li>
-            <li><a href="servicii.html">Logistică</a></li>
+            <li><a href="uniforme-scolare.html">Uniforme școlare</a></li>
+            <li><a href="corporate.html">Corporate</a></li>
+            <li><a href="medical.html">Medical</a></li>
+            <li><a href="hospitality.html">Hospitality</a></li>
+            <li><a href="workwear.html">Workwear</a></li>
           </ul>
         </div>
-        
-        <div class="footer-column">
+        <div>
+          <h4>Servicii</h4>
+          <ul>
+            <li><a href="servicii.html">Design & producție</a></li>
+            <li><a href="catalog.html">Colecții uniforme</a></li>
+            <li><a href="configurator.html">Măsurători</a></li>
+          </ul>
+        </div>
+        <div>
           <h4>Contact</h4>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
-            <span>Str. Fabrica de Glucoză, Nr. 5<br>București</span>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-            <span>+40 721 234 567</span>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z"/></svg>
-            <span>contact@theuniformmaker.ro</span>
-          </div>
+          <ul>
+            <li><a href="mailto:contact@theuniformmaker.ro">contact@theuniformmaker.ro</a></li>
+            <li><a href="tel:+40721234567">+40 721 234 567</a></li>
+            <li>București, România</li>
+            <li><a href="contact.html">GDPR · Termeni</a></li>
+          </ul>
         </div>
       </div>
-      
-      <div class="footer-bottom">
-        <p>&copy; 2025 The Uniform Maker. Toate drepturile rezervate.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M16.5 6c.83 0 1.5.67 1.5 1.5S17.33 9 16.5 9 15 8.33 15 7.5 15.67 6 16.5 6M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2m0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9z"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2zM4 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg></a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="js/main.js"></script>
-  <script>
-    // Portfolio filter functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const filterBtns = document.querySelectorAll('.filter-btn');
-      const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          // Remove active class from all buttons
-          filterBtns.forEach(b => b.classList.remove('active'));
-          // Add active class to clicked button
-          btn.classList.add('active');
-
-          const filter = btn.getAttribute('data-filter');
-
-          portfolioItems.forEach(item => {
-            if (filter === 'all' || item.getAttribute('data-category') === filter) {
-              item.style.display = 'block';
-              // Add fade in animation
-              item.style.opacity = '0';
-              item.style.transform = 'translateY(20px)';
-              setTimeout(() => {
-                item.style.transition = 'opacity 0.3s, transform 0.3s';
-                item.style.opacity = '1';
-                item.style.transform = 'translateY(0)';
-              }, 50);
-            } else {
-              item.style.display = 'none';
-            }
-          });
-        });
-      });
-    });
-  </script>
-</body>
-</html>
+      <script src="js/main.js"></script>
+    </body>
+    </html>
